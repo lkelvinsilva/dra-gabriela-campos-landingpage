@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+--rose: #e998ab; /* tom principal */
+--rose-dark: #c86478;
+}
+
+
+body {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-color: #fafafa;
+}
