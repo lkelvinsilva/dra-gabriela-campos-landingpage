@@ -117,7 +117,7 @@ export default function Testimonials() {
           target="_blank"
           rel="noopener noreferrer"
           className="mt-12 inline-block bg-gradient-to-r from-[#6B1F3A] to-[#6B1F3A]
-          text-white py-4 px-10 rounded-full text-lg font-semibold shadow-lg
+          text-white !text-white py-4 px-10 rounded-full text-lg font-semibold shadow-lg
           hover:opacity-90 transition"
         >
           QUERO AGENDAR MINHA CONSULTA!

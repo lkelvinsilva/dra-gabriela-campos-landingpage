@@ -1,36 +1,34 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import { FiMenu, FiX, FiPhone, FiMapPin } from "react-icons/fi";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  const [isDark, setIsDark] = useState(false); // <<< NOVO
+  const [isDark, setIsDark] = useState(false);
 
-  /* Detecta scroll */
+  // Detecta scroll
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  /* Detecta se está sobre seção escura */
+  // Detecta se está sobre seção escura
   useEffect(() => {
     const darkSections = document.querySelectorAll(".section-dark");
-
     const observer = new IntersectionObserver(
-      entries => {
-        const active = entries.some(entry => entry.isIntersecting);
+      (entries) => {
+        const active = entries.some((entry) => entry.isIntersecting);
         setIsDark(active);
       },
       { threshold: 0.4 }
     );
 
-    darkSections.forEach(sec => observer.observe(sec));
+    darkSections.forEach((sec) => observer.observe(sec));
     return () => observer.disconnect();
   }, []);
 
@@ -52,62 +50,41 @@ export default function Navbar() {
           />
         </a>
 
-        {/* MENU CENTRAL */}
+        {/* MENU DESKTOP */}
         <nav className="hidden md:flex gap-10 font-semibold text-[17px]">
           <a href="#inicio" className="menu-link">Início</a>
           <a href="#sobre" className="menu-link">Sobre</a>  
           <a href="#procedimentos" className="menu-link">Procedimentos</a>
           <a href="#resultados" className="menu-link">Resultados</a>
-          <a href="https://portfolio-gabriela-gray.vercel.app/" className="menu-link" target="_blank" rel="noopener noreferrer" >
-             Dra Gabriela Campos
+          <a
+            href="https://portfolio-gabriela-gray.vercel.app/"
+            className="menu-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Dra Gabriela Campos
           </a>
         </nav>
 
-        {/* BOTÕES À DIREITA COM ÍCONES */}
+        {/* BOTÕES */}
         <div className="hidden md:flex gap-4 items-center">
           
-          {/* WhatsApp */}
-        <a
-          href="https://wa.me/5585992883317"
-          target="_blank"
-          rel="noreferrer"
-          className="
-            px-6 py-2 
-            rounded-full 
-            bg-[var(--vinho)] 
-            text-white !text-white
-            font-serif 
-            tracking-wide
-            text-base
-            shadow-md 
-            hover:bg-[var(--vinho-2)]
-            transition
-            flex items-center gap-2
-          "
-        >
-          <FiPhone className="text-base" />
-          Entre em contato
-        </a>
+          <a
+            href="https://wa.me/5585992883317"
+            target="_blank"
+            rel="noreferrer"
+            className="px-6 py-2 rounded-full bg-[var(--vinho)] text-white !text-white font-serif tracking-wide shadow-md hover:bg-[var(--vinho-2)] transition flex items-center gap-2"
+          >
+            <FiPhone className="text-base" />
+            Entre em contato
+          </a>
 
-          {/* Localização */}
           <a
             href="https://maps.google.com/"
             target="_blank"
             rel="noreferrer"
-            className="
-            px-6 py-2 
-            rounded-full 
-            bg-[var(--vinho)] 
-            text-white !text-white
-            font-serif 
-            tracking-wide
-            text-base
-            shadow-md 
-            hover:bg-[var(--vinho-2)]
-            transition
-            flex items-center gap-2
-          "
-        >
+            className="px-6 py-2 rounded-full bg-[var(--vinho)] text-white !text-white font-serif tracking-wide shadow-md hover:bg-[var(--vinho-2)] transition flex items-center gap-2"
+          >
             <FiMapPin className="text-base" />
             Localização
           </a>
@@ -134,7 +111,7 @@ export default function Navbar() {
           <a
             href="https://wa.me/5585992883317"
             target="_blank"
-            className="px-6 py-2 rounded-full bg-[var(--vinho)] text-white text-center mt-2 flex items-center justify-center gap-2"
+            className="px-6 py-2 rounded-full bg-[var(--vinho)] text-white !text-white text-center mt-2 flex items-center justify-center gap-2"
           >
             <FiPhone className="text-lg" />
             Entre em contato
@@ -143,7 +120,7 @@ export default function Navbar() {
           <a
             href="https://maps.google.com/"
             target="_blank"
-            className="px-6 py-2 rounded-full bg-[var(--vinho-2)] text-white text-center flex items-center justify-center gap-2"
+            className="px-6 py-2 rounded-full bg-[var(--vinho-2)] text-white !text-white text-center flex items-center justify-center gap-2"
           >
             <FiMapPin className="text-lg" />
             Localização
@@ -151,38 +128,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-
-    );
-  }
-
-export default function Navbar() {
-  return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed w-full bg-background shadow-md z-50"
-    >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-primary font-serif text-2xl">Gabriela Gray</div>
-        <div className="space-x-6 font-sans text-secondary flex">
-          {['Inicio', 'Servicos', 'Depoimentos', 'Contato'].map((item, i) => (
-            <Link
-              key={i}
-              activeClass="text-primary"
-              to={item}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="cursor-pointer hover:text-primary transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </motion.nav>
-
   );
 }

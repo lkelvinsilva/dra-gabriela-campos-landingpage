@@ -103,7 +103,7 @@ export default function ServicesCarousel() {
             href="https://wa.me/5585992883317?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 bg-[var(--vinho)] text-white px-14 py-5 rounded-full 
+            className="flex items-center gap-4 bg-[var(--vinho)] text-white !text-white px-14 py-5 rounded-full 
             shadow-lg text-xl font-semibold hover:bg-[#6b2539] transition"
           >
             TRANSFORME SEU SORRISO
