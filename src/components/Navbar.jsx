@@ -1,8 +1,10 @@
-<<<<<<< HEAD
+
 "use client";
 
 import { useState, useEffect } from "react";
 import { FiMenu, FiX, FiPhone, FiMapPin } from "react-icons/fi";
+import { Link } from 'react-scroll';
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -149,9 +151,9 @@ export default function Navbar() {
         </div>
       )}
     </header>
-=======
-import { Link } from 'react-scroll';
-import { motion } from "framer-motion";
+
+    );
+  }
 
 export default function Navbar() {
   return (
@@ -181,6 +183,6 @@ export default function Navbar() {
         </div>
       </div>
     </motion.nav>
->>>>>>> 4f97506e04f5c44cd9b36bd2598a58c0b1003ef9
+
   );
 }
