@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import WhatsAppFab from "./WhatsappFab.jsx";
 
 export default function Footer() {
@@ -124,3 +125,12 @@ export default function Footer() {
   );
 }
 
+=======
+export default function Footer() {
+  return (
+    <footer className="bg-secondary text-background py-6 text-center">
+      <p>© 2025 Gabriela Gray. Todos os direitos reservados.</p>
+    </footer>
+  );
+}
+>>>>>>> 4f97506e04f5c44cd9b36bd2598a58c0b1003ef9
