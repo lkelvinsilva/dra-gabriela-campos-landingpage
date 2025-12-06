@@ -1,0 +1,129 @@
+.services-section {
+  display: flex;
+  background: var(--bg);
+  padding: 70px 40px;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Fades laterais --- */
+.services-section::before,
+.services-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.services-section::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.services-section::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+
+/* Left content */
+.left-content {
+  width: 35%;
+}
+
+/* Carrossel com snapping */
+.carousel {
+  width: 65%;
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+/* --- Cards --- */
+.card {
+  position: relative;
+  min-width: 330px;
+  max-width: 330px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  scroll-snap-align: center;
+  color: white;
+  cursor: grab;
+  transition: transform 0.3s ease;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* --- Overlay da legenda --- */
+.card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+}
+
+.card .overlay h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.card .overlay p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* --- Setas flutuantes --- */
+.arrow-floating {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--wine);
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.arrow-floating:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-left {
+  left: 35%;
+}
+
+.arrow-right {
+  right: 20px;
+}
