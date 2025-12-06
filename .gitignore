@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Logs
 logs
 *.log
@@ -49,4 +49,4 @@ yarn-debug.log*
 yarn-error.log*
 .vercel
 .env*.local
->>>>>>> 4f97506e04f5c44cd9b36bd2598a58c0b1003ef9
+

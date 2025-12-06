@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import WhatsAppFab from "./WhatsappFab.jsx";
 
 export default function Footer() {
@@ -124,8 +123,6 @@ export default function Footer() {
     </footer>
   );
 }
-
-=======
 export default function Footer() {
   return (
     <footer className="bg-secondary text-background py-6 text-center">
@@ -133,4 +130,4 @@ export default function Footer() {
     </footer>
   );
 }
->>>>>>> 4f97506e04f5c44cd9b36bd2598a58c0b1003ef9
+

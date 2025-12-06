@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 
 export default function Hero() {
@@ -59,8 +58,6 @@ export default function Hero() {
   );
 }
 
-
-=======
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -98,4 +95,4 @@ export default function Hero() {
     </section>
   );
 }
->>>>>>> 4f97506e04f5c44cd9b36bd2598a58c0b1003ef9
+

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -20,19 +19,19 @@ export default function Testimonials() {
       data: "2022-08-10",
       texto:
         "Experiência espetacular, dentista super atenciosa, organizada e o principal, fazendo o melhor para o meu sorriso.",
-      foto: "/public/depoimentos/user3.jpg",
+      foto: "/depoimentos/user3.jpg",
     },
     {
       nome: "Felipe Rodrigues",
       data: "2022-08-10",
       texto: "EXCELENTE!!! Valeu cada centavo pago pelo meu procedimento.",
-      foto: "/public/depoimentos/user2.jpg",
+      foto: "/depoimentos/user2.jpg",
     },
     {
       nome: "Caio Dias",
       data: "2022-08-03",
       texto: "Excelente profissional!",
-      foto: "/public/depoimentos/user1.jpg",
+      foto: "/depoimentos/user1.jpg",
     },
   ];
 
@@ -40,7 +39,7 @@ export default function Testimonials() {
     <section className="py-24 bg-[#e6d7cc]">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
-        {/* Título igual ao modelo */}
+        {/* Título */}
         <h3 className="text-[18px] text-[#8a6f64] tracking-wide mb-3">
           Depoimentos
         </h3>
@@ -71,7 +70,7 @@ export default function Testimonials() {
                 className="min-w-[360px] bg-white rounded-xl shadow-lg p-10 
                 flex flex-col items-center text-center border border-[#e3d6cf]"
               >
-                {/* Foto redonda */}
+                {/* Foto */}
                 <div className="w-20 h-20 rounded-full overflow-hidden mb-4 shadow">
                   <img
                     src={d.foto}
@@ -112,48 +111,22 @@ export default function Testimonials() {
 
         </div>
 
-        {/* Botão CTA igual ao modelo */}
+        {/* Botão CTA */}
         <a
           href="https://wa.me/5585992883317?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
           target="_blank"
           rel="noopener noreferrer"
           className="mt-12 inline-block bg-gradient-to-r from-[#6B1F3A] to-[#6B1F3A]
-          text-white !text-white py-4 px-10 rounded-full text-lg font-semibold shadow-lg
+          text-white py-4 px-10 rounded-full text-lg font-semibold shadow-lg
           hover:opacity-90 transition"
         >
           QUERO AGENDAR MINHA CONSULTA!
         </a>
-=======
-import { motion } from "framer-motion";
 
-const testimonials = [
-  { name: "Maria Silva", text: "Excelente serviço, super recomendo!" },
-  { name: "João Santos", text: "Profissional muito competente e atenciosa." },
-  { name: "Ana Paula", text: "Meu site ficou incrível, adorei o design!" },
-];
-
-export default function Testimonials() {
-  return (
-    <section id="Depoimentos" className="py-20 bg-secondary text-background">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-serif mb-12">Depoimentos</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.3, duration: 0.6 }}
-              className="bg-accent p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
-            >
-              <p className="mb-4">"{t.text}"</p>
-              <h4 className="font-serif text-primary">- {t.name}</h4>
-            </motion.div>
-          ))}
-        </div>
->>>>>>> 4f97506e04f5c44cd9b36bd2598a58c0b1003ef9
       </div>
     </section>
   );
 }
+
+
+

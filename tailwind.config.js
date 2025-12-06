@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
 };
-=======
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -22,4 +21,4 @@ module.exports = {
   },
   plugins: [],
 }
->>>>>>> 4f97506e04f5c44cd9b36bd2598a58c0b1003ef9
+
