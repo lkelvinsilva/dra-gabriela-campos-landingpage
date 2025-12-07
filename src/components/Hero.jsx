@@ -14,12 +14,12 @@ export default function Hero() {
             Autoestima <br /> através do <span className="text-[var(--vinho)]">Sorriso!</span>
           </h1>
 
-          <p className="text-base md:text-lg mt-5 leading-relaxed text-gray-700 font-sans">
+          <p className="font-serif text-base md:text-lg mt-5 leading-relaxed text-gray-700 font-sans">
             Olá, eu sou a <strong>Dra. Gabriela Campos</strong>, especialista em odontologia estética e harmonização facial.
             Transformo sorrisos com técnicas precisas e um cuidado totalmente individualizado.
           </p>
 
-          <p className="mt-5 font-semibold">
+          <p className="mt-5 font-semibold text-gray-700">
             Seu novo sorriso começa aqui. Vamos dar o primeiro passo?
           </p>
 
@@ -29,7 +29,7 @@ export default function Hero() {
               href="https://wa.me/5585992883317"
               target="_blank"
               rel="noreferrer"
-              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white font-serif shadow-md hover:bg-[var(--vinho-2)] transition"
+              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white font-serif shadow-md hover:bg-[var(--vinho-2)] transition"
             >
               Quero transformar meu sorriso
             </a>

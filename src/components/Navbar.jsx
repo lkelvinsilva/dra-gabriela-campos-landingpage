@@ -21,17 +21,36 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <a href="/" className="flex items-center">
-          <img src="/logo-gc.jpg" className="h-16 w-auto" alt="Logo" />
+          <img src="/logo-gc.jpg" className="h-18 w-26" alt="Logo" />
         </a>
 
         {/* MENU DESKTOP */}
-        <nav className="hidden md:flex gap-10 text-[17px] font-semibold">
+        <nav className="hidden md:flex gap-10 text-[17px] font-semibold justify-center w-full">
           <a href="#inicio" className="menu-link">Início</a>
           <a href="#sobre" className="menu-link">Sobre</a>
           <a href="#procedimentos" className="menu-link">Procedimentos</a>
           <a href="#resultados" className="menu-link">Resultados</a>
           <a href="#clinica" className="menu-link">Clínica</a>
         </nav>
+        {/* BOTOES DESKTOP */}
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href="https://wa.me/5585992883317"
+            className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white whitespace-nowrap flex items-center justify-center gap-3"
+          >
+            <FiPhone />
+            Entre em contato
+          </a>
+
+          <a
+            href="https://maps.google.com/"
+            className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
+          >
+            <FiMapPin />
+            Localização
+          </a>
+        </div>
+
 
         {/* MENU MOBILE BUTTON */}
         <button
@@ -58,7 +77,7 @@ export default function Navbar() {
         <div className="mt-6 flex flex-col gap-4">
           <a
             href="https://wa.me/5585992883317"
-            className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white flex items-center justify-center gap-3"
+            className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
           >
             <FiPhone />
             Entre em contato
@@ -66,7 +85,7 @@ export default function Navbar() {
 
           <a
             href="https://maps.google.com/"
-            className="px-6 py-3 rounded-full bg-[var(--vinho-2)] text-white flex items-center justify-center gap-3"
+            className="px-6 py-3 rounded-full bg-[var(--vinho-2)] text-white !text-white flex items-center justify-center gap-3"
           >
             <FiMapPin />
             Localização
