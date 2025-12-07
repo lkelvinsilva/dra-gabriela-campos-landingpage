@@ -1,67 +1,59 @@
+// Hero.jsx
 import React from "react";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="hero section">
-      <div className="container hero-grid">
-        
-        <div>
-          <small
-            className="text-x1 md:text-xl font-serif"
-            style={{ color: "#8C3A54" }}
-          >
-            Resgate sua
-          </small>
+    <section id="inicio" className="w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7]">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          <h1 className="hero-title">
-            Autoestima <br /> através do <span>Sorriso!</span>
+        {/* --- TEXTO --- */}
+        <div className="text-center md:text-left text-[#8C3A54] font-serif">
+          <span className="text-lg md:text-xl opacity-90">Resgate sua</span>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mt-3">
+            Autoestima <br /> através do <span className="text-[var(--vinho)]">Sorriso!</span>
           </h1>
 
-          <p className="hero-sub">
+          <p className="text-base md:text-lg mt-5 leading-relaxed text-gray-700 font-sans">
             Olá, eu sou a <strong>Dra. Gabriela Campos</strong>, especialista em odontologia estética e harmonização facial.
-            Transformo sorrisos com técnicas precisas e um cuidado totalmente individualizado, para que você se sinta mais confiante e radiante.
+            Transformo sorrisos com técnicas precisas e um cuidado totalmente individualizado.
           </p>
 
-          <ul style={{ color: "#8C3A54", fontWeight: 600 }}>
+          <p className="mt-5 font-semibold">
             Seu novo sorriso começa aqui. Vamos dar o primeiro passo?
-          </ul>
+          </p>
 
-          <div className="hero-actions">
+          {/* BOTÕES */}
+          <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center md:justify-start">
             <a
               href="https://wa.me/5585992883317"
               target="_blank"
               rel="noreferrer"
-              className="
-                px-6 py-2 
-                rounded-full 
-                bg-[var(--vinho)] 
-                text-white !text-white
-                font-serif 
-                tracking-wide
-                text-base
-                shadow-md 
-                hover:bg-[var(--vinho-2)]
-                transition
-                flex items-center gap-2
-              "
+              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white font-serif shadow-md hover:bg-[var(--vinho-2)] transition"
             >
               Quero transformar meu sorriso
             </a>
 
-            <a className="btn-outline" href="#resultados">
+            <a
+              href="#resultados"
+              className="px-6 py-3 rounded-full border-2 border-[var(--vinho)] text-[var(--vinho)] font-serif hover:bg-[var(--vinho)] hover:text-white transition text-center"
+            >
               Ver Resultados
             </a>
           </div>
         </div>
 
-        {/* FOTO */}
-        <div className="hero-photo">
-          <img src="/gabi.jpg" alt="Dra. Gabriela Campos" />
+        {/* --- FOTO --- */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src="/gabi.jpg"
+            alt="Dra. Gabriela Campos"
+            className="w-full max-w-xs md:max-w-md rounded-xl shadow-lg object-cover"
+          />
         </div>
 
       </div>
     </section>
   );
 }
-
 

@@ -4,7 +4,7 @@ export default function HeroMinimal() {
   return (
     <section
       id="Inicio"
-      className="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center px-4"
+      className="min-h-[80vh] bg-cover bg-center flex flex-col justify-center items-center text-center px-4"
       style={{ backgroundImage: "url('/logo-gc.jpg')" }}
     >
       <motion.h1
