@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full">
 
       {/* MAPA EM CIMA */}
-      <div className="w-full h-[330px]">
+      <div id="clinica" className="w-full h-[330px]">
         <iframe
           title="Localização"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7965.75649046582!2d-38.493993!3d-3.737317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74875cae9ed59%3A0x92fc152af08fe8dc!2sR.%20Monsenhor%20Bruno%2C%201153%20-%20Meireles%2C%20Fortaleza%20-%20CE!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
@@ -19,7 +19,7 @@ export default function Footer() {
 
       {/* BLOCO VINHO */}
       <div className="w-full bg-[#8C3A54] text-white py-16 text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-serif mb-4">
+        <h2 id="clinica" className="text-3xl md:text-4xl font-serif mb-4">
           Venha Conhecer Nossa Clínica!
         </h2>
 
