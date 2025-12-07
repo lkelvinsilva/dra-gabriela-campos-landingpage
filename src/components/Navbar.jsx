@@ -15,13 +15,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
-      ${scrolled ? "bg-white/90 shadow-lg backdrop-blur-xl" : "bg-white/70 backdrop-blur-md"}
-    `}>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
+        ${scrolled ? "bg-white/90 shadow-lg backdrop-blur-xl" : "bg-white/70 backdrop-blur-md"}
+      `}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
+        {/* LOGO */}
         <a href="/" className="flex items-center">
-          <img src="/logo-gc.jpg" className="h-18 w-26" alt="Logo" />
+          <img src="/logo-gc.jpg" className="h-16 w-24" alt="Logo" />
         </a>
 
         {/* MENU DESKTOP */}
@@ -32,7 +35,8 @@ export default function Navbar() {
           <a href="#resultados" className="menu-link">Resultados</a>
           <a href="#clinica" className="menu-link">Clínica</a>
         </nav>
-        {/* BOTOES DESKTOP */}
+
+        {/* BOTÕES DESKTOP */}
         <div className="hidden md:flex items-center gap-4">
           <a
             href="https://wa.me/5585992883317"
@@ -51,47 +55,88 @@ export default function Navbar() {
           </a>
         </div>
 
-
-        {/* MENU MOBILE BUTTON */}
+        {/* BOTÃO MENU MOBILE */}
         <button
           className="md:hidden text-4xl text-[var(--vinho)]"
-          onClick={() => setOpenMenu(!openMenu)}
+          onClick={() => setOpenMenu(true)}
         >
-          {openMenu ? <FiX /> : <FiMenu />}
+          <FiMenu />
         </button>
       </div>
 
-      {/* MENU MOBILE */}
-      <div className={`
-        fixed top-0 right-0 h-full w-[80%] bg-white shadow-2xl p-8 flex flex-col gap-8 
-        transition-transform duration-300 md:hidden
-        ${openMenu ? "translate-x-0" : "translate-x-full"}
-      `}>
-        <a onClick={() => setOpenMenu(false)} href="#inicio" className="menu-mobile">Início</a>
-        <a onClick={() => setOpenMenu(false)} href="#sobre" className="menu-mobile">Sobre</a>
-        <a onClick={() => setOpenMenu(false)} href="#procedimentos" className="menu-mobile">Procedimentos</a>
-        <a onClick={() => setOpenMenu(false)} href="#resultados" className="menu-mobile">Resultados</a>
-        <a onClick={() => setOpenMenu(false)} href="#clinica" className="menu-mobile">Clínica</a>
+      {/* MENU MOBILE + OVERLAY */}
+      <div
+        className={`
+          fixed inset-0 z-40 flex md:hidden
+          transition-opacity duration-300
+          ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+        `}
+      >
+        {/* FUNDO ESCURO */}
+        <div
+          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          onClick={() => setOpenMenu(false)}
+        ></div>
 
-        {/* BOTOES */}
-        <div className="mt-6 flex flex-col gap-4">
-          <a
-            href="https://wa.me/5585992883317"
-            className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
+        {/* PAINEL LATERAL */}
+        <div
+          className={`
+            relative ml-auto h-full w-[80%] max-w-[350px]
+            bg-[var(--vinho-2)] text-white p-8 shadow-2xl
+            transition-transform duration-300
+            ${openMenu ? "translate-x-0" : "translate-x-full"}
+          `}
+        >
+          {/* BOTÃO FECHAR */}
+          <button
+            className="absolute top-6 right-6 text-3xl"
+            onClick={() => setOpenMenu(false)}
           >
-            <FiPhone />
-            Entre em contato
-          </a>
+            <FiX />
+          </button>
 
-          <a
-            href="https://maps.google.com/"
-            className="px-6 py-3 rounded-full bg-[var(--vinho-2)] text-white !text-white flex items-center justify-center gap-3"
-          >
-            <FiMapPin />
-            Localização
-          </a>
+          {/* LOGO MOBILE */}
+          <div className="flex flex-col items-center mt-6 mb-10">
+            <img src="/logo-gc.jpg" className="w-32 mb-3 rounded-lg" alt="Logo" />
+            <p className="text-sm opacity-90">Odontologia Estética</p>
+          </div>
+
+          {/* TÍTULO MENU */}
+          <h3 className="text-3xl text-center font-semibold mb-2">Menu</h3>
+          <div className="w-28 mx-auto h-[2px] bg-white/40 mb-8"></div>
+
+          {/* LINKS */}
+          <nav className="flex flex-col items-center gap-6 text-lg mb-6">
+            <a onClick={() => setOpenMenu(false)} href="#inicio">Início</a>
+            <a onClick={() => setOpenMenu(false)} href="#resultados">Resultados</a>
+            <a onClick={() => setOpenMenu(false)} href="#procedimentos">Procedimentos</a>
+            <a onClick={() => setOpenMenu(false)} href="#sobre">Sobre</a>
+            <a onClick={() => setOpenMenu(false)} href="#clinica">Clínica</a>
+          </nav>
+
+          {/* BOTÕES DO MENU MOBILE */}
+          <div className="mt-4 flex flex-col gap-4">
+            <a
+              href="https://wa.me/5585992883317"
+              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
+            >
+              <FiPhone />
+              Entre em contato!
+            </a>
+
+            <a
+              href="https://maps.google.com/"
+              className="px-6 py-3 rounded-full border border-white text-white !text-white flex items-center justify-center gap-3"
+            >
+              <FiMapPin />
+              Nossa Localização
+            </a>
+          </div>
         </div>
       </div>
     </header>
   );
 }
+
+
+

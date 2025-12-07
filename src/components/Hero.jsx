@@ -1,9 +1,17 @@
-// Hero.jsx
 import React from "react";
 
 export default function Hero() {
   return (
     <section id="inicio" className="w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7]">
+      {/* MARCA D'ÁGUA NO FUNDO DO HERO */}
+      <div
+        className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none"
+        style={{
+          backgroundImage: "url('/logo-gc.jpg')",
+          backgroundSize: "35%",
+          left: "-50%", // ajuste se quiser maior ou menor
+        }}>
+      </div>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* --- TEXTO --- */}
