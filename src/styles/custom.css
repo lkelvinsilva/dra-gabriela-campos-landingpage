@@ -342,3 +342,10 @@ a:hover {
 html {
   scroll-behavior: smooth;
 }
+* {
+  max-width: 100vw !important;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
