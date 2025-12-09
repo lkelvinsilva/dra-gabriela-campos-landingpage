@@ -18,37 +18,37 @@ export default function Harmonizacao() {
     {
       title: "Preenchimento Labial",
       desc: "Restaure volumes e contornos com naturalidade. Ideal para suavizar rugas e realçar a beleza facial.",
-      image: "/public/procedimentos/preenchimento.jpg",
+      image: "/procedimentos/preenchimento.jpg",
     },
     {
       title: "Preenchimento Mandibular",
       desc: "Defina o contorno da mandíbula, proporcionando um aspecto mais jovem e harmonioso através do equilíbrio das proporções.",
-      image: "/public/procedimentos/mandibular.jpg",
+      image: "/procedimentos/mandibular.jpg",
     },
     {
       title: "Full Face",
       desc: "Técnica que redefine contornos faciais, promovendo um aspecto mais jovem.",
-      image: "/public/procedimentos/bioestimulador.jpg",
+      image: "/procedimentos/bioestimulador.jpg",
     },
     {
       title: "Bioestimulador de Colágeno",
       desc: "Estimula a produção natural de colágeno, melhorando firmeza e elasticidade da pele para um aspecto rejuvenescido.",
-      image: "/public/procedimentos/colageno.jpg",
+      image: "/procedimentos/colageno.jpg",
     },
     {
       title: "Toxina Botulínica (Botox)",
       desc: "Reduza linhas de expressão e rugas com resultados naturais. Procedimento seguro para um visual rejuvenescido.",
-      image: "/public/procedimentos/botox.jpg",
+      image: "/procedimentos/botox.jpg",
     },
     {
       title: "Preenchimento Mentual",
       desc: "Harmonize o contorno do queixo, equilibrando as proporções faciais e realçando sua beleza natural.",
-      image: "/public/procedimentos/mentual.jpg",
+      image: "/procedimentos/mentual.jpg",
     },
     {
       title: "Preenchimento do Bigode Chinês",
       desc: "Suavize linhas profundas ao redor da boca, restaurando um aspecto jovem e natural ao sorriso.",
-      image: "/public/procedimentos/bigode.jpg",
+      image: "/procedimentos/bigode.jpg",
     },
   ];
 
@@ -73,12 +73,13 @@ export default function Harmonizacao() {
           <h2 className="text-5xl font-serif font-bold text-white leading-tight mt-2">
             Harmonização <br /> Orofacial
           </h2>
-        <div className="flex justify-start mt-[20px] pl-[-80px]">
+        <div className="flex justify-start md:justify-start mt-5">
+
         <a
             href="https://wa.me/5585992883317?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 px-14 py-4 rounded-full shadow-lg text-xl font-semibold transition bg-white text-[var(--vinho)]hover:bg-[#fdf3f4]">
+            className="flex items-center gap-4 px-14 py-4 rounded-full shadow-lg text-xl font-semibold transition bg-white text-[var(--vinho)] hover:bg-[#fdf3f4]">
   
             Quero saber mais
         </a>
@@ -113,7 +114,7 @@ export default function Harmonizacao() {
 
           {/* FADE LATERAL DIREITO */}
           <div className="absolute right-0 top-0 h-full w-20 
-            bg-gradient-to-l from-[##8C3A54] to-transparent pointer-events-none z-10">
+            bg-gradient-to-l from-[#8C3A54] to-transparent pointer-events-none z-10">
           </div>
 
           {/* CARROSSEL */}
@@ -127,7 +128,8 @@ export default function Harmonizacao() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="min-w-[300px] bg-[#a05a73] rounded-3xl shadow-xl overflow-hidden snap-start
+                className="min-w-[260px] md:min-w-[300px]
+                bg-[#a05a73] rounded-3xl shadow-xl overflow-hidden snap-start
                 hover:-translate-y-2 transition-transform duration-300"
               >
                 {/* IMG */}
