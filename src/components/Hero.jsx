@@ -8,8 +8,8 @@ export default function Hero() {
         className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none"
         style={{
           backgroundImage: "url('/logo-gc.jpg')",
-          backgroundSize: "35%",
-          left: "-50%", // ajuste se quiser maior ou menor
+          backgroundSize: "50%",
+          left: "-20%", // ajuste se quiser maior ou menor
         }}>
       </div>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -52,13 +52,19 @@ export default function Hero() {
         </div>
 
         {/* --- FOTO --- */}
-        <div className="flex justify-center md:justify-end">
-          <img
-            src="/gabi.jpg"
-            alt="Dra. Gabriela Campos"
-            className="w-full max-w-xs md:max-w-md rounded-xl shadow-lg object-cover"
-          />
-        </div>
+      <div className="flex justify-center md:pr-05">
+        <img
+          src="/gabi.jpg"
+          alt="Dra. Gabriela Campos"
+          className="
+            rounded-xl shadow-lg object-cover
+            w-[220px]          /* tamanho menor no MOBILE */
+            sm:w-[260px]       /* aumenta um pouco no celular maior */
+            md:w-[450px]       /* tamanho normal no DESKTOP */
+            lg:w-[420px]       /* opcional: maior em telas grandes */
+          "
+        />
+      </div>
 
       </div>
     </section>

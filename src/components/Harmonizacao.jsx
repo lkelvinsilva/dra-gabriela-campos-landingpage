@@ -7,52 +7,59 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 export default function Harmonizacao() {
   const scrollRef = useRef(null);
   const itemWidth = 320; // largura aproximada de cada card
-  const autoplaySpeed = 12000; // intervalo do autoplay
+  const autoplaySpeed = 5000; // intervalo do autoplay
 
   const slideLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -100, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: -60, behavior: "smooth" });
     }
   };
 
   const slideRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 100, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: 60, behavior: "smooth" });
     }
   };
 
   const cards = [
     {
+      id: 1,
       title: "Preenchimento Labial",
       desc: "Restaure volumes e contornos com naturalidade. Ideal para suavizar rugas e realçar a beleza facial.",
       image: "/procedimentos/preenchimento.jpg",
     },
     {
+      id: 2,
       title: "Preenchimento Mandibular",
       desc: "Defina o contorno da mandíbula, proporcionando um aspecto mais jovem e harmonioso através do equilíbrio das proporções.",
       image: "/procedimentos/mandibular.jpg",
     },
     {
+      id: 3,
       title: "Full Face",
       desc: "Técnica que redefine contornos faciais, promovendo um aspecto mais jovem.",
       image: "/procedimentos/bioestimulador.jpg",
     },
     {
+      id: 4,
       title: "Bioestimulador de Colágeno",
       desc: "Estimula a produção natural de colágeno, melhorando firmeza e elasticidade da pele para um aspecto rejuvenescido.",
       image: "/procedimentos/colageno.jpg",
     },
     {
+      id: 5,
       title: "Toxina Botulínica (Botox)",
       desc: "Reduza linhas de expressão e rugas com resultados naturais.",
       image: "/procedimentos/botox.jpg",
     },
     {
+      id: 6,
       title: "Preenchimento Mentual",
       desc: "Harmonize o contorno do queixo e melhore o equilíbrio facial.",
       image: "/procedimentos/mentual.jpg",
     },
     {
+      id:7,
       title: "Preenchimento do Bigode Chinês",
       desc: "Suavize linhas profundas ao redor da boca, restaurando jovialidade.",
       image: "/procedimentos/bigode.jpg",
@@ -160,7 +167,7 @@ export default function Harmonizacao() {
 
             {[cards[cards.length - 1], ...cards, cards[0]].map((card, index) => (
               <motion.div
-                key={card.title}
+                key={`${card.id}-${index}`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}

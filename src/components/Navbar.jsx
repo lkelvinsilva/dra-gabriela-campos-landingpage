@@ -38,21 +38,28 @@ export default function Navbar() {
 
         {/* BOTÕES DESKTOP */}
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href="https://wa.me/5585992883317"
-            className="px-8 py-3 rounded-full bg-[var(--vinho)] text-white !text-white whitespace-nowrap flex items-center justify-center gap-3"
-          >
-            <FiPhone />
-            Entre em contato
-          </a>
 
-          <a
-            href="https://maps.google.com/"
-            className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
-          >
-            <FiMapPin />
-            Localização
-          </a>
+        <a
+          href="https://wa.me/5585992883317"
+          className="px-9 py-3 rounded-full bg-[var(--vinho)] text-white !text-white
+         flex items-center justify-center gap-3 
+         whitespace-nowrap"
+
+        
+        >
+          <FiPhone className="w-4 h-4 text-white flex-shrink-0"/>
+          Entre em contato
+        </a>
+
+        <a
+          href="https://maps.google.com/"
+          className="px-8 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-5"
+        >
+          <FiMapPin className="w-4 h-4 text-white flex-shrink-0" />
+          Localização
+        </a>
+
+
         </div>
 
         {/* BOTÃO MENU MOBILE */}
@@ -106,7 +113,7 @@ export default function Navbar() {
           <div className="w-28 mx-auto h-[2px] bg-white/40 mb-8"></div>
 
           {/* LINKS */}
-          <nav className="flex flex-col items-center gap-6 text-lg mb-6">
+          <nav className="flex flex-col items-center texr-white !text-white gap-6 text-lg mb-6">
             <a onClick={() => setOpenMenu(false)} href="#inicio">Início</a>
             <a onClick={() => setOpenMenu(false)} href="#resultados">Resultados</a>
             <a onClick={() => setOpenMenu(false)} href="#procedimentos">Procedimentos</a>
@@ -118,7 +125,7 @@ export default function Navbar() {
           <div className="mt-4 flex flex-col gap-4">
             <a
               href="https://wa.me/5585992883317"
-              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
+              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3 md:translate-x-[-40px]"
             >
               <FiPhone />
               Entre em contato!

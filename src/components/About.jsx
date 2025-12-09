@@ -15,12 +15,12 @@ export default function About() {
             Sobre a Dra. Gabriela Campos
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mt-6 font-sans">
+          <p className="font-serif text-lg md:text-xl text-gray-700 leading-relaxed mt-6 font-sans">
             A Dra. Gabriela Campos é especialista em odontologia estética e harmonização
             facial, unindo precisão técnica e cuidado humano em cada atendimento.
           </p>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mt-6 font-sans">
+          <p className="font-serif text-lg md:text-xl text-gray-700 leading-relaxed mt-6 font-sans">
             Cirurgiã-dentista formada pela UNIFOR, possui trajetória marcada pela excelência,
             sensibilidade clínica e constante atualização.
           </p>
