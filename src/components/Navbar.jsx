@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <a
             href="https://wa.me/5585992883317"
-            className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white whitespace-nowrap flex items-center justify-center gap-3"
+            className="px-8 py-3 rounded-full bg-[var(--vinho)] text-white !text-white whitespace-nowrap flex items-center justify-center gap-3"
           >
             <FiPhone />
             Entre em contato
@@ -97,7 +97,7 @@ export default function Navbar() {
 
           {/* LOGO MOBILE */}
           <div className="flex flex-col items-center mt-6 mb-10">
-            <img src="/logo-gc.jpg" className="w-32 mb-3 rounded-lg" alt="Logo" />
+            <img src="/logo-gc.jpg" className="w-40 mb-3 rounded-lg" alt="Logo" />
             <p className="text-sm opacity-90">Odontologia Estética</p>
           </div>
 
