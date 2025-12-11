@@ -1,4 +1,3 @@
-// Navbar.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -20,10 +19,8 @@ export default function Navbar() {
         ${scrolled ? "bg-white/90 shadow-lg backdrop-blur-xl" : "bg-white/70 backdrop-blur-md"}
       `}
     >
+      {/* CONTAINER PRINCIPAL */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-  
-      </div>
-        
 
         {/* LOGO */}
         <a href="/" className="flex items-center">
@@ -31,7 +28,7 @@ export default function Navbar() {
         </a>
 
         {/* MENU DESKTOP */}
-        <nav className="hidden md:flex gap-10 text-[17px] font-semibold justify-center w-full">
+        <nav className="hidden md:flex gap-10 text-[17px] font-semibold justify-center flex-1">
           <a href="#inicio" className="menu-link">Início</a>
           <a href="#sobre" className="menu-link">Sobre</a>
           <a href="#procedimentos" className="menu-link">Procedimentos</a>
@@ -41,51 +38,44 @@ export default function Navbar() {
 
         {/* BOTÕES DESKTOP */}
         <div className="hidden md:flex items-center gap-4">
+          <a
+            href="https://wa.me/5585992883317"
+            className="px-10 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
+          >
+            <FiPhone className="w-4 h-4" />
+            Entre em contato
+          </a>
 
-        <a
-          href="https://wa.me/5585992883317"
-          className="px-10 py-3 rounded-full bg-[var(--vinho)] text-white !text-white
-         flex items-center justify-center gap-3 
-         whitespace-nowrap"
+          <a
+            href="https://maps.google.com/"
+            className="px-10 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
+          >
+            <FiMapPin className="w-4 h-4" />
+            Localização
+          </a>
+        </div>
 
-        
+        {/* BOTÃO MOBILE HAMBÚRGUER */}
+        <button
+          className="md:hidden text-4xl text-[var(--vinho)] ml-auto relative z-[10001]"
+          onClick={() => setOpenMenu(true)}
         >
-          <FiPhone className="w-4 h-4 text-white flex-shrink-0"/>
-          Entre em contato
-        </a>
-
-        <a
-          href="https://maps.google.com/"
-          className="px-10 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
-        >
-          <FiMapPin className="w-4 h-4 text-white flex-shrink-0" />
-          Localização
-        </a>
-
+          <FiMenu />
+        </button>
       </div>
-      <header>
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      {/* BOTÃO MENU MOBILE (hamburguer) */}
-      <button
-        className="md:hidden text-4xl text-[var(--vinho)] relative z-[10001]"
-        onClick={() => setOpenMenu(true)}
-      >
-        <FiMenu />
-      </button>
-      </div>
+
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
-          fixed inset-0 z-[9999] flex md:hidden
+          fixed inset-0 z-[9999] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
       >
 
-
         {/* FUNDO ESCURO */}
         <div
-          className="absolute inset-0 bg-[#6B1F3A] backdrop-blur-sm"
+          className="absolute inset-0 bg-[#6B1F3A]/90 backdrop-blur-sm"
           onClick={() => setOpenMenu(false)}
         ></div>
 
@@ -114,12 +104,12 @@ export default function Navbar() {
             <p className="text-sm opacity-90">Odontologia Estética</p>
           </div>
 
-          {/* TÍTULO MENU */}
+          {/* TÍTULO */}
           <h3 className="text-3xl text-center font-semibold mb-2">Menu</h3>
           <div className="w-28 mx-auto h-[2px] bg-white/40 mb-8"></div>
 
           {/* LINKS */}
-          <nav className="flex flex-col items-center texr-white !text-white gap-6 text-lg mb-6">
+          <nav className="flex flex-col items-center gap-6 text-lg mb-6">
             <a onClick={() => setOpenMenu(false)} href="#inicio">Início</a>
             <a onClick={() => setOpenMenu(false)} href="#resultados">Resultados</a>
             <a onClick={() => setOpenMenu(false)} href="#procedimentos">Procedimentos</a>
@@ -127,11 +117,11 @@ export default function Navbar() {
             <a onClick={() => setOpenMenu(false)} href="#clinica">Clínica</a>
           </nav>
 
-          {/* BOTÕES DO MENU MOBILE */}
+          {/* BOTÕES MOBILE */}
           <div className="mt-4 flex flex-col gap-4">
             <a
               href="https://wa.me/5585992883317"
-              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3 md:translate-x-[-40px]"
+              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white flex items-center justify-center gap-3"
             >
               <FiPhone />
               Entre em contato!
@@ -139,7 +129,7 @@ export default function Navbar() {
 
             <a
               href="https://maps.google.com/"
-              className="px-6 py-3 rounded-full border border-white text-white !text-white flex items-center justify-center gap-3"
+              className="px-6 py-3 rounded-full border border-white text-white flex items-center justify-center gap-3"
             >
               <FiMapPin />
               Nossa Localização
@@ -148,9 +138,5 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-  </header>
   );
 }
-
-
-
