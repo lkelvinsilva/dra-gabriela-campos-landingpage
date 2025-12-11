@@ -90,13 +90,14 @@ export default function Navbar() {
         {/* PAINEL LATERAL */}
         <div
           className={`
-            relative mr-0 h-full w-[80%] max-w-[350px]
+            fixed right-0 top-0 h-full w-[80%] max-w-[350px]
             bg-[var(--vinho-2)] text-white p-8 shadow-2xl
             transition-transform duration-300
             ${openMenu ? "translate-x-0" : "translate-x-full"}
             z-[10000]
           `}
         >
+
           {/* BOTÃO FECHAR */}
           <button
             className="absolute top-6 right-6 text-3xl"
