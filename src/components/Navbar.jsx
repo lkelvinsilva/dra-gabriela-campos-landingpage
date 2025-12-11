@@ -14,15 +14,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${scrolled  
-  ? "bg-[rgba(255,255,255,0.9)] shadow-lg backdrop-blur-xl"
-  : "bg-[rgba(255,255,255,0.7)] backdrop-blur-md"
-}
-}
-      `}
-    >
+      <header
+        className={`fixed top-0 left-0 w-full z-[3000] transition-all duration-300
+          ${
+            scrolled
+              ? "bg-[rgba(255,255,255,0.9)] shadow-lg backdrop-blur-xl"
+              : "bg-[rgba(255,255,255,0.7)] backdrop-blur-md"
+          }
+        `}
+      >
+    
       {/* CONTAINER PRINCIPAL */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
@@ -61,7 +62,7 @@ export default function Navbar() {
 
         {/* BOTÃO MOBILE HAMBÚRGUER */}
         <button
-          className="md:hidden text-4xl text-[var(--vinho)] ml-auto relative z-[902]"
+          className="md:hidden text-4xl text-[var(--vinho)] ml-auto fixed top-6 right-6 z-[2000]"
           onClick={() => setOpenMenu(true)}
         >
           <FiMenu />
@@ -79,20 +80,22 @@ export default function Navbar() {
 
         {/* FUNDO ESCURO */}
         <div
-          className="absolute inset-0 bg-[#6B1F3A]/90 backdrop-blur-sm"
+          className="absolute inset-0 bg-[#000]/40 backdrop-blur-sm z-[1000]"
           onClick={() => setOpenMenu(false)}
         ></div>
 
-        {/* PAINEL LATERAL */}
-        <div
-          className={`
-            fixed right-0 top-0 h-full w-[80%] max-w-[350px]
-            bg-[var(--vinho-2)] text-white p-8 shadow-2xl
-            transition-transform duration-300
-            ${openMenu ? "translate-x-0" : "translate-x-full"}
-            z-[900]
-          `}
-        >
+
+                  {/* PAINEL LATERAL */}
+          <div
+            className={`
+              fixed right-0 top-0 h-full w-[80%] max-w-[350px]
+              bg-[var(--vinho-2)] text-white p-8 shadow-2xl
+              transition-transform duration-300
+              ${openMenu ? "translate-x-0" : "translate-x-full"}
+              z-[1200]
+            `}
+          >
+
 
           {/* BOTÃO FECHAR */}
           <button
