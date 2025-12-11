@@ -16,7 +16,11 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${scrolled ? "bg-white/90 shadow-lg backdrop-blur-xl" : "bg-white/70 backdrop-blur-md"}
+        ${scrolled  
+  ? "bg-[rgba(255,255,255,0.9)] shadow-lg backdrop-blur-xl"
+  : "bg-[rgba(255,255,255,0.7)] backdrop-blur-md"
+}
+}
       `}
     >
       {/* CONTAINER PRINCIPAL */}
