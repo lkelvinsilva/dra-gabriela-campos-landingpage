@@ -21,6 +21,9 @@ export default function Navbar() {
       `}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  
+      </div>
+        
 
         {/* LOGO */}
         <a href="/" className="flex items-center">
@@ -41,7 +44,7 @@ export default function Navbar() {
 
         <a
           href="https://wa.me/5585992883317"
-          className="px-9 py-3 rounded-full bg-[var(--vinho)] text-white !text-white
+          className="px-10 py-3 rounded-full bg-[var(--vinho)] text-white !text-white
          flex items-center justify-center gap-3 
          whitespace-nowrap"
 
@@ -53,32 +56,24 @@ export default function Navbar() {
 
         <a
           href="https://maps.google.com/"
-          className="px-8 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-5"
+          className="px-10 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
         >
           <FiMapPin className="w-4 h-4 text-white flex-shrink-0" />
           Localização
         </a>
 
-
-        </div>
-
-        {/* BOTÃO MENU MOBILE */}
-        <button
-          className="md:hidden text-4xl text-[var(--vinho)]"
-          onClick={() => setOpenMenu(true)}
-        >
-          <FiMenu />
-        </button>
       </div>
 
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
-          fixed inset-0 z-40 flex md:hidden
+          fixed inset-0 z-[9999] flex md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
       >
+
+
         {/* FUNDO ESCURO */}
         <div
           className="absolute inset-0 bg-[#F4E7E4] backdrop-blur-sm"
@@ -92,6 +87,7 @@ export default function Navbar() {
             bg-[var(--vinho-2)] text-white p-8 shadow-2xl
             transition-transform duration-300
             ${openMenu ? "translate-x-0" : "translate-x-full"}
+            z-[10000]
           `}
         >
           {/* BOTÃO FECHAR */}

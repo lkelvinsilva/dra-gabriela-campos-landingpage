@@ -54,7 +54,7 @@ export default function Hero() {
         {/* --- FOTO --- */}
       <div className="flex justify-center md:pr-05">
         <img
-          src="/gabi.jpg"
+          src="/gabi2.jpg"
           alt="Dra. Gabriela Campos"
           className="
             rounded-xl shadow-lg object-cover

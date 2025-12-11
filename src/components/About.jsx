@@ -36,11 +36,11 @@ export default function About() {
 
         {/* FOTO */}
         <div className="flex justify-center w-full overflow-hidden">
-          <div className="w-full max-w-[320px] md:max-w-md rounded-xl overflow-hidden shadow-xl">
+          <div className="w-full max-w-[360px] md:max-w-md rounded-xl overflow-hidden shadow-xl">
             <img
               src="/gabiAbout.jpg"
               alt="Dra Gabriela"
-              className="w-full h-auto max-h-[420px] object-cover"
+              className="w-full h-auto max-h-[520px] object-cover"
             />
           </div>
         </div>

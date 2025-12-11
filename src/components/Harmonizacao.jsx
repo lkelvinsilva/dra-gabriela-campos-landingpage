@@ -44,7 +44,7 @@ export default function Harmonizacao() {
       id: 4,
       title: "Bioestimulador de Colágeno",
       desc: "Estimula a produção natural de colágeno, melhorando firmeza e elasticidade da pele para um aspecto rejuvenescido.",
-      image: "/procedimentos/colageno.jpg",
+      image: "/procedimentos/colageno2.jpg",
     },
     {
       id: 5,
