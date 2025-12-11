@@ -63,6 +63,8 @@ export default function Navbar() {
         </a>
 
       </div>
+      <header>
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       {/* BOTÃO MENU MOBILE (hamburguer) */}
       <button
         className="md:hidden text-4xl text-[var(--vinho)] relative z-[10001]"
@@ -70,7 +72,7 @@ export default function Navbar() {
       >
         <FiMenu />
       </button>
-
+      </div>
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
@@ -146,6 +148,7 @@ export default function Navbar() {
         </div>
       </div>
     </header>
+  </header>
   );
 }
 
