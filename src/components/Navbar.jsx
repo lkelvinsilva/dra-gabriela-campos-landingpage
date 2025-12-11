@@ -63,6 +63,13 @@ export default function Navbar() {
         </a>
 
       </div>
+      {/* BOTÃO MENU MOBILE (hamburguer) */}
+      <button
+        className="md:hidden text-4xl text-[var(--vinho)] relative z-[10001]"
+        onClick={() => setOpenMenu(true)}
+      >
+        <FiMenu />
+      </button>
 
       {/* MENU MOBILE + OVERLAY */}
       <div
@@ -76,7 +83,7 @@ export default function Navbar() {
 
         {/* FUNDO ESCURO */}
         <div
-          className="absolute inset-0 bg-[#F4E7E4] backdrop-blur-sm"
+          className="absolute inset-0 bg-[#6B1F3A] backdrop-blur-sm"
           onClick={() => setOpenMenu(false)}
         ></div>
 
