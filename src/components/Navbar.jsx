@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
       <header
-        className={`fixed top-0 left-0 w-full z-[3000] transition-all duration-300
+        className={`fixed top-0 left-0 w-full z-[800] transition-all duration-300
           ${
             scrolled
               ? "bg-[rgba(255,255,255,0.9)] shadow-lg backdrop-blur-xl"
@@ -62,7 +62,7 @@ export default function Navbar() {
 
         {/* BOTÃO MOBILE HAMBÚRGUER */}
         <button
-          className="md:hidden text-4xl text-[var(--vinho)] ml-auto fixed top-6 right-6 z-[2000]"
+          className="md:hidden text-4xl text-[var(--vinho)] ml-auto"
           onClick={() => setOpenMenu(true)}
         >
           <FiMenu />
