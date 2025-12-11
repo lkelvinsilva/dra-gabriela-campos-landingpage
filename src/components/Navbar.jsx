@@ -90,7 +90,7 @@ export default function Navbar() {
         {/* PAINEL LATERAL */}
         <div
           className={`
-            relative ml-auto h-full w-[80%] max-w-[350px]
+            relative mr-0 h-full w-[80%] max-w-[350px]
             bg-[var(--vinho-2)] text-white p-8 shadow-2xl
             transition-transform duration-300
             ${openMenu ? "translate-x-0" : "translate-x-full"}
