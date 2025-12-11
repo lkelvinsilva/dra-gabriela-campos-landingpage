@@ -57,7 +57,7 @@ export default function Navbar() {
 
         {/* BOTÃO MOBILE HAMBÚRGUER */}
         <button
-          className="md:hidden text-4xl text-[var(--vinho)] ml-auto relative z-[10001]"
+          className="md:hidden text-4xl text-[var(--vinho)] ml-auto relative z-[902]"
           onClick={() => setOpenMenu(true)}
         >
           <FiMenu />
@@ -67,7 +67,7 @@ export default function Navbar() {
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
-          fixed inset-0 z-[9999] md:hidden
+          fixed inset-0 z-[901] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
@@ -86,7 +86,7 @@ export default function Navbar() {
             bg-[var(--vinho-2)] text-white p-8 shadow-2xl
             transition-transform duration-300
             ${openMenu ? "translate-x-0" : "translate-x-full"}
-            z-[10000]
+            z-[900]
           `}
         >
 
