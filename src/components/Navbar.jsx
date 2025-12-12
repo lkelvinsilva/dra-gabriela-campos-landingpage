@@ -97,14 +97,13 @@ useEffect(() => {
         {/* PAINEL LATERAL */}
           <div
             className={`
-              fixed right-0 top-0 h-auto min-h-screen w-[80%] max-w-[350px] overflow-y-auto
+              fixed right-0 top-0 h-full w-[80%] max-w-[350px] overflow-y-auto
               menu-panel text-white p-8 shadow-2xl
               transition-transform duration-300
               ${openMenu ? "translate-x-0" : "translate-x-full"}
               z-[3002]
             `}
           >
-
 
           {/* BOTÃO FECHAR */}
           <button
