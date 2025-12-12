@@ -13,6 +13,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (openMenu) {
+        document.body.style.overflow = "hidden"; // trava scroll
+        document.body.style.touchAction = "none"; // trava gesto no iPhone
+        } else {
+          document.body.style.overflow = "auto"; // libera scroll
+          document.body.style.touchAction = "auto";
+          }
+        }, [openMenu]);
+
   return (
       <header
         className={`fixed top-0 left-0 w-full z-[2000] transition-all duration-300
@@ -75,7 +85,10 @@ export default function Navbar() {
           fixed inset-0 z-[3000] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+
+
         `}
+        
       >
 
         {/* FUNDO ESCURO */}
