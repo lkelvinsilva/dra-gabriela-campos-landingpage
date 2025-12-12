@@ -98,7 +98,7 @@ useEffect(() => {
           <div
             className={`
               absolute right-0 top-0 h-auto min-h-screen w-[80%] max-w-[350px] overflow-y-auto
-              menu-panel text-white p-8 shadow-2xl
+              menu-panel text-white !text-white p-8 shadow-2xl
               transition-transform duration-300
               ${openMenu ? "translate-x-0" : "translate-x-full"}
               z-[3002]
@@ -137,7 +137,7 @@ useEffect(() => {
           <div className="mt-4 flex flex-col gap-4">
             <a
               href="https://wa.me/5585992883317"
-              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
+              className="px-6 py-3 rounded-full border border-white text-white !text-white flex items-center justify-center gap-3"
             >
               <FiPhone />
               Entre em contato!
@@ -145,7 +145,7 @@ useEffect(() => {
 
             <a
               href="https://maps.google.com/"
-              className="px-6 py-3 rounded-full border border-white text-white flex items-center justify-center gap-3"
+              className="px-6 py-3 rounded-full border border-white text-white !text-white flex items-center justify-center gap-3"
             >
               <FiMapPin />
               Nossa Localização
