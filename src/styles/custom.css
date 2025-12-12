@@ -344,6 +344,13 @@ html {
 }
 
 body {
-  min-height: auto;
+  min-height: auto !important;
   overflow-x: hidden;
+}
+.menu-overlay {
+  background: var(--vinho);
+}
+
+.menu-panel {
+  background: var(--vinho-2);
 }

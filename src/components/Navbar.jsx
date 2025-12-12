@@ -18,8 +18,8 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full z-[2000] transition-all duration-300
           ${
             scrolled
-              ? "bg-[rgba(255,255,255,0.9)] shadow-lg backdrop-blur-xl"
-              : "bg-[rgba(255,255,255,0.7)] backdrop-blur-md"
+              ? "bg-[#E8D7D2] shadow-lg backdrop-blur-xl"
+              : "bg-[rgba(255, 255, 255, 0.3)] backdrop-blur-md"
           }
         `}
       >
@@ -80,14 +80,14 @@ export default function Navbar() {
 
         {/* FUNDO ESCURO */}
           <div
-            className="absolute inset-0 bg-[var(--vinho)] z-[1000]"
+            className="absolute inset-0 menu-overlay z-[1000]"
             onClick={() => setOpenMenu(false)}
           ></div>
                   {/* PAINEL LATERAL */}
           <div
             className={`
-              fixed right-0 top-0 h-full w-[80%] max-w-[350px]
-              bg-[var(--vinho-2)] text-white p-8 shadow-2xl
+              absolute right-0 top-0 h-full w-[80%] max-w-[350px]
+              menu-panel text-white p-8 shadow-2xl
               transition-transform duration-300
               ${openMenu ? "translate-x-0" : "translate-x-full"}
               z-[1200]
