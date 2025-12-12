@@ -80,7 +80,7 @@ export default function Navbar() {
 
         {/* FUNDO ESCURO */}
         <div
-          className="absolute inset-0 bg-[#000]/40 backdrop-blur-sm z-[1000]"
+          className="absolute inset-0 bg-[#6B1F3A]/40 backdrop-blur-sm z-[1000]"
           onClick={() => setOpenMenu(false)}
         ></div>
 

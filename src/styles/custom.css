@@ -344,5 +344,6 @@ html {
 }
 
 body {
+  min-height: auto;
   overflow-x: hidden;
 }
