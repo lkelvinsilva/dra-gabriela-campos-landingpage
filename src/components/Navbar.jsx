@@ -126,7 +126,7 @@ export default function Navbar() {
           <div className="mt-4 flex flex-col gap-4">
             <a
               href="https://wa.me/5585992883317"
-              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white flex items-center justify-center gap-3"
+              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
             >
               <FiPhone />
               Entre em contato!
