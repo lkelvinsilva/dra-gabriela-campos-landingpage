@@ -13,15 +13,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    if (openMenu) {
-        document.body.style.overflow = "hidden"; // trava scroll
-        document.body.style.touchAction = "none"; // trava gesto no iPhone
-        } else {
-          document.body.style.overflow = "auto"; // libera scroll
-          document.body.style.touchAction = "auto";
-          }
-        }, [openMenu]);
+useEffect(() => {
+  if (openMenu) {
+    document.body.style.overflow = "hidden"; 
+    document.body.style.touchAction = "none"; 
+  } else {
+    document.body.style.overflow = "auto"; 
+    document.body.style.touchAction = "auto";
+  }
+}, [openMenu]);
+
 
   return (
       <header
