@@ -97,7 +97,7 @@ useEffect(() => {
         {/* PAINEL LATERAL */}
           <div
             className={`
-              absolute right-0 top-0 h-auto min-h-screen w-[80%] max-w-[350px] overflow-y-auto
+              absolute right-0 top-0 h-full w-[80%] max-w-[350px]
               menu-panel text-white !text-white p-8 shadow-2xl
               transition-transform duration-300
               ${openMenu ? "translate-x-0" : "translate-x-full"}
