@@ -8,8 +8,8 @@ export default function Hero() {
         className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none"
         style={{
           backgroundImage: "url('/logo-gc.jpg')",
-          backgroundSize: "50%",
-          left: "-20%", // ajuste se quiser maior ou menor
+          backgroundSize: "40%",
+          left: "-40%", // ajuste se quiser maior ou menor
         }}>
       </div>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
