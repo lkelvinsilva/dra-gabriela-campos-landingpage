@@ -375,6 +375,24 @@ body {
   animation: slideIn .3s ease forwards;
   color: white;
 }
+/* Impede QUALQUER elemento de quebrar a largura no mobile */
+* {
+  max-width: 100vw !important;
+}
+
+/* Corrige o menu lateral */
+.menu-panel {
+  width: 80vw !important;
+  max-width: 350px !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+}
+
+/* Evita que animação empurre a tela */
+.menu-panel {
+  transform: translateX(100%);
+}
+
 
 @keyframes slideIn {
   from { transform: translateX(100%); }
@@ -440,6 +458,8 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.menu-panel {
-  max-width: 100vw;
+
+body {
+  overflow-x: hidden !important;
+  position: relative;
 }
