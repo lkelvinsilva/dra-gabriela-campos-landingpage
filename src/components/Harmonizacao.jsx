@@ -62,7 +62,7 @@ export default function Harmonizacao() {
         const firstCard = scrollRef.current.querySelector(".card-item");
         if (firstCard) {
           const gap = 24; // gap-6
-          itemWidthRef.current = firstCard.offsetWidth + gap;
+          itemWidth.current = firstCard.offsetWidth + gap;
         }
       }
     };
@@ -79,7 +79,7 @@ export default function Harmonizacao() {
   const slideLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: -itemWidthRef.current,
+        left: -itemWidth.current,
         behavior: "smooth",
       });
     }
@@ -88,7 +88,7 @@ export default function Harmonizacao() {
   const slideRight = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: itemWidthRef.current,
+        left: itemWidth.current,
         behavior: "smooth",
       });
     }
@@ -101,7 +101,7 @@ export default function Harmonizacao() {
     if (!scrollRef.current) return;
 
     const scrollLeft = scrollRef.current.scrollLeft;
-    const size = itemWidthRef.current;
+    const size = itemWidth.current;
     const total = cards.length;
 
     // chegou no clone do início → ir para último real
@@ -120,8 +120,8 @@ export default function Harmonizacao() {
   ------------------------- */
   useEffect(() => {
     const start = () => {
-      if (scrollRef.current && itemWidthRef.current > 0) {
-        scrollRef.current.scrollLeft = itemWidthRef.current;
+      if (scrollRef.current && itemWidth.current > 0) {
+        scrollRef.current.scrollLeft = itemWidth.current;
       }
     };
 
