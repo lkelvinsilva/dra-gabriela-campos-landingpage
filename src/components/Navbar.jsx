@@ -86,10 +86,7 @@ useEffect(() => {
           absolute inset-0 z-[3000] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
-
-
         `}
-        
       >
 
         {/* FUNDO ESCURO */}
@@ -97,10 +94,10 @@ useEffect(() => {
             className="absolute inset-0 menu-overlay z-[3001]"
             onClick={() => setOpenMenu(false)}
           ></div>
-                  {/* PAINEL LATERAL */}
+        {/* PAINEL LATERAL */}
           <div
             className={`
-              absolute right-0 top-0 h-full w-[80%] max-w-[350px]
+              absolute right-0 top-0 h-auto min-h-screen w-[80%] max-w-[350px] overflow-y-auto
               menu-panel text-white p-8 shadow-2xl
               transition-transform duration-300
               ${openMenu ? "translate-x-0" : "translate-x-full"}
