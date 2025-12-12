@@ -72,7 +72,7 @@ export default function Navbar() {
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
-          fixed inset-0 z-[901] md:hidden
+          fixed inset-0 z-[3000] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
@@ -80,7 +80,7 @@ export default function Navbar() {
 
         {/* FUNDO ESCURO */}
           <div
-            className="absolute inset-0 menu-overlay z-[1000]"
+            className="absolute inset-0 menu-overlay z-[3001]"
             onClick={() => setOpenMenu(false)}
           ></div>
                   {/* PAINEL LATERAL */}
@@ -90,7 +90,7 @@ export default function Navbar() {
               menu-panel text-white p-8 shadow-2xl
               transition-transform duration-300
               ${openMenu ? "translate-x-0" : "translate-x-full"}
-              z-[1200]
+              z-[3002]
             `}
           >
 
