@@ -144,11 +144,6 @@ body {
   gap: 36px;
   align-items: center;
 }
-.hero-grid {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
 .hero-title {
   font-family: "Playfair Display", serif;
@@ -355,6 +350,8 @@ body {
   overflow-x: hidden;
 }
 
+  
+
 
 /* ============================
       MENU MOBILE FINAL
@@ -369,31 +366,19 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-.menu-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-}
+
 /* PAINEL DO MENU */
 .menu-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
   width: 75%;
-  max-width: 350px;
-  height: 100vh;
+  height: 100dvh;
   background: var(--vinho);
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 26px;
-  z-index: 1000;
-
-  transform: translateX(100%);
-  transition: transform .3s ease;
+  position: relative;
+  animation: slideIn .3s ease forwards;
   color: white;
-}
-.menu-panel.open {
-  transform: translateX(0);
 }
 
 @keyframes slideIn {
@@ -433,9 +418,3 @@ body {
     display: block !important;
   }
 }
-@media (max-width: 680px) {
-  .hero-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
