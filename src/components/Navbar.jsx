@@ -83,7 +83,7 @@ useEffect(() => {
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
-          absolute inset-0 z-[3000] md:hidden
+          fixed inset-0 z-[3000] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
