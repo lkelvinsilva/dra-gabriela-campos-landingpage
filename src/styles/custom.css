@@ -344,7 +344,7 @@ html {
 }
 
 body {
-  min-height: auto !important;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -433,4 +433,10 @@ body {
   max-width: 100% !important;
   height: auto !important;
 }
-
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

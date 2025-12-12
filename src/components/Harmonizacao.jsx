@@ -11,13 +11,13 @@ export default function Harmonizacao() {
 
   const slideLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -60, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: -itemWidth, behavior: "smooth" });
     }
   };
 
   const slideRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 60, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: itemWidth, behavior: "smooth" });
     }
   };
 
@@ -171,7 +171,7 @@ export default function Harmonizacao() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="min-w-[260px] md:min-w-[300px]
+                className="w-[260px] md:w-[300px] flex-shrink-0
                 bg-[#a05a73] rounded-3xl shadow-xl overflow-hidden snap-start
                 hover:-translate-y-2 transition-transform duration-300"
               >
