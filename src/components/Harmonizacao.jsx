@@ -9,18 +9,6 @@ export default function Harmonizacao() {
   const itemWidth = useRef(0); // largura aproximada de cada card
   const autoplaySpeed = 5000; // intervalo do autoplay
 
-  const slideLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -itemWidth, behavior: "smooth" });
-    }
-  };
-
-  const slideRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: itemWidth, behavior: "smooth" });
-    }
-  };
-
   const cards = [
     {
       id: 1,
@@ -65,32 +53,88 @@ export default function Harmonizacao() {
       image: "/procedimentos/bigode.jpg",
     },
   ];
+/* -------------------------
+      CALCULAR LARGURA REAL DO CARD
+  ------------------------- */
+  useEffect(() => {
+    const updateWidth = () => {
+      if (scrollRef.current) {
+        const firstCard = scrollRef.current.querySelector(".card-item");
+        if (firstCard) {
+          const gap = 24; // gap-6
+          itemWidthRef.current = firstCard.offsetWidth + gap;
+        }
+      }
+    };
+
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
+  /* -------------------------
+      FUNÇÕES DO SLIDE
+  ------------------------- */
+  const slideLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: -itemWidthRef.current,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const slideRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: itemWidthRef.current,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  /* -------------------------
+      LOOP INFINITO REAL
+  ------------------------- */
   const handleScroll = () => {
     if (!scrollRef.current) return;
 
     const scrollLeft = scrollRef.current.scrollLeft;
+    const size = itemWidthRef.current;
+    const total = cards.length;
 
-    // Se chegou no clone do final → volta ao primeiro real
-    if (scrollLeft >= (cards.length + 1) * itemWidth) {
-      scrollRef.current.scrollLeft = itemWidth;
+    // chegou no clone do início → ir para último real
+    if (scrollLeft <= 0) {
+      scrollRef.current.scrollLeft = total * size;
     }
 
-    // Se chegou no clone do início → vai ao último real
-    if (scrollLeft <= 0) {
-      scrollRef.current.scrollLeft = cards.length * itemWidth;
+    // chegou no clone do final → voltar para primeiro real
+    if (scrollLeft >= (total + 1) * size) {
+      scrollRef.current.scrollLeft = size;
     }
   };
-  useEffect(() => {
-  if (scrollRef.current) {
-    scrollRef.current.scrollLeft = itemWidth; // começa no primeiro item real
-  }
-}, []);
 
+  /* -------------------------
+      INICIAR NO PRIMEIRO CARD REAL
+  ------------------------- */
+  useEffect(() => {
+    const start = () => {
+      if (scrollRef.current && itemWidthRef.current > 0) {
+        scrollRef.current.scrollLeft = itemWidthRef.current;
+      }
+    };
+
+    setTimeout(start, 50);
+  }, []);
+
+  /* -------------------------
+      AUTOPLAY
+  ------------------------- */
   useEffect(() => {
     const interval = setInterval(() => {
       slideRight();
     }, autoplaySpeed);
-
 
     return () => clearInterval(interval);
   }, []);
@@ -102,8 +146,7 @@ export default function Harmonizacao() {
       style={{ backgroundColor: "#6B1F3A" }}
     >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
-        {/* ESQUERDA */} 
+        {/* ESQUERDA */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -117,7 +160,7 @@ export default function Harmonizacao() {
             Harmonização <br /> Orofacial
           </h2>
 
-          <div className="flex justify-start md:justify-start mt-5">
+          <div className="flex justify-start mt-5">
             <a
               href="https://wa.me/5585992883317?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos."
               target="_blank"
@@ -133,7 +176,7 @@ export default function Harmonizacao() {
             <button
               onClick={slideLeft}
               className="w-11 h-11 rounded-full backdrop-blur-md bg-white/20 
-              text-white flex items-center justify-center shadow-lg border border-white/30"
+                text-white flex items-center justify-center shadow-lg border border-white/30"
             >
               <FaChevronLeft />
             </button>
@@ -141,7 +184,7 @@ export default function Harmonizacao() {
             <button
               onClick={slideRight}
               className="w-11 h-11 rounded-full backdrop-blur-md bg-white/20 
-              text-white flex items-center justify-center shadow-lg border border-white/30"
+                text-white flex items-center justify-center shadow-lg border border-white/30"
             >
               <FaChevronRight />
             </button>
@@ -150,46 +193,47 @@ export default function Harmonizacao() {
 
         {/* DIREITA – CARROSSEL */}
         <div className="relative">
-
-          {/* FADE LATERAL ESQUERDA */}
+          {/* FADE ESQUERDA */}
           <div className="absolute left-0 top-0 h-full w-20 
-            bg-gradient-to-r from-[#8C3A54] to-transparent pointer-events-none z-10"></div>
+              bg-gradient-to-r from-[#8C3A54] to-transparent pointer-events-none z-10" />
 
-          {/* FADE LATERAL DIREITA */}
+          {/* FADE DIREITA */}
           <div className="absolute right-0 top-0 h-full w-20 
-            bg-gradient-to-l from-[#8C3A54] to-transparent pointer-events-none z-10"></div>
+              bg-gradient-to-l from-[#8C3A54] to-transparent pointer-events-none z-10" />
 
           <div
             ref={scrollRef}
             onScroll={handleScroll}
             className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory pb-4"
           >
+            {/* CLONE DO ÚLTIMO + CARDS + CLONE DO PRIMEIRO */}
+            {[cards[cards.length - 1], ...cards, cards[0]].map(
+              (card, index) => (
+                <motion.div
+                  key={`${card.id}-${index}`}
+                  className="card-item w-[260px] md:w-[300px] flex-shrink-0
+                    bg-[#a05a73] rounded-3xl shadow-xl overflow-hidden snap-start
+                    hover:-translate-y-2 transition-transform duration-300"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.15, duration: 0.5 }}
+                >
+                  <div className="relative">
+                    <img
+                      src={card.image}
+                      className="w-full h-48 object-cover transition-scale duration-500 hover:scale-110"
+                    />
+                  </div>
 
-            {[cards[cards.length - 1], ...cards, cards[0]].map((card, index) => (
-              <motion.div
-                key={`${card.id}-${index}`}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="w-[260px] md:w-[300px] flex-shrink-0
-                bg-[#a05a73] rounded-3xl shadow-xl overflow-hidden snap-start
-                hover:-translate-y-2 transition-transform duration-300"
-              >
-                <div className="relative">
-                  <img
-                    src={card.image}
-                    className="w-full h-48 object-cover transition-scale duration-500 hover:scale-110"
-                  />
-                </div>
-
-                <div className="p-6 text-white">
-                  <h3 className="text-2xl font-serif font-bold">{card.title}</h3>
-                  <p className="text-white/90 mt-3 text-sm leading-relaxed">
-                    {card.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="p-6 text-white">
+                    <h3 className="text-2xl font-serif font-bold">{card.title}</h3>
+                    <p className="text-white/90 mt-3 text-sm leading-relaxed">
+                      {card.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              )
+            )}
           </div>
         </div>
       </div>
