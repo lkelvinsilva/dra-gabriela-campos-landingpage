@@ -15,19 +15,6 @@
 
   --radius: 12px;
 }
-.menu-overlay {
-  
-  background: rgba(0, 0, 0, 0.55);
-}
-
-
-.menu-panel {
- 
-  background: var(--vinho);
-}
-
-
-
 
 /* ============================
    BASE
@@ -359,4 +346,70 @@ html {
 body {
   min-height: auto !important;
   overflow-x: hidden;
+}
+
+/* ============================
+      MENU MOBILE FINAL
+=============================== */
+
+/* BACKDROP – overlay escuro */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* PAINEL DO MENU */
+.menu-panel {
+  width: 75%;
+  height: 100dvh;
+  background: var(--vinho);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+  animation: slideIn .3s ease forwards;
+  color: white;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* BOTÃO X */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: white;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* LINKS DO MENU */
+.menu-items a {
+  color: white !important;
+  font-size: 20px;
+  padding: 12px 0;
+  display: block;
+}
+
+/* CELULAR */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important;
+  }
 }
