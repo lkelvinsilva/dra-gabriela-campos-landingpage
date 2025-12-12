@@ -15,6 +15,14 @@
 
   --radius: 12px;
 }
+.menu-overlay {
+  background: var(--vinho);
+}
+
+.menu-panel {
+  background: var(--vinho-2);
+}
+
 
 /* ============================
    BASE
@@ -346,11 +354,4 @@ html {
 body {
   min-height: auto !important;
   overflow-x: hidden;
-}
-.menu-overlay {
-  background: var(--vinho);
-}
-
-.menu-panel {
-  background: var(--vinho-2);
 }
