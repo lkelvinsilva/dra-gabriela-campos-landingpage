@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function Harmonizacao() {
   const scrollRef = useRef(null);
-  const itemWidth = 320; // largura aproximada de cada card
+  const itemWidth = useRef(0); // largura aproximada de cada card
   const autoplaySpeed = 5000; // intervalo do autoplay
 
   const slideLeft = () => {
