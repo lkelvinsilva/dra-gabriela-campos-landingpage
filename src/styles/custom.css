@@ -344,14 +344,9 @@ html {
 }
 
 body {
-  
-  max-width: 100%;
-  box-sizing: border-box;
+  min-height: auto !important;
   overflow-x: hidden;
 }
-
-  
-
 
 /* ============================
       MENU MOBILE FINAL

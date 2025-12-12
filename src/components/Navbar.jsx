@@ -83,7 +83,7 @@ useEffect(() => {
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
-          fixed inset-0 z-[3000] md:hidden
+          absolute inset-0 z-[3000] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
@@ -98,7 +98,7 @@ useEffect(() => {
           <div
             className={`
               absolute right-0 top-0 h-auto min-h-screen w-[80%] max-w-[350px] overflow-y-auto
-              menu-panel text-white !text-white p-8 shadow-2xl
+              menu-panel text-white p-8 shadow-2xl
               transition-transform duration-300
               ${openMenu ? "translate-x-0" : "translate-x-full"}
               z-[3002]
