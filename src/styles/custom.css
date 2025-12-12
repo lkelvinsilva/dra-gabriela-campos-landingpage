@@ -413,3 +413,24 @@ body {
     display: block !important;
   }
 }
+/* Impede o carrossel de quebrar o layout */
+.carousel-wrapper,
+.my-carousel,
+.swiper,
+.splide,
+.glide {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Cards não podem ter largura fixa maior que a tela */
+.carousel-card {
+  max-width: 90% !important;
+}
+
+/* Imagens seguras no mobile */
+.carousel-card img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
