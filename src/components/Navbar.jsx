@@ -83,7 +83,7 @@ useEffect(() => {
       {/* MENU MOBILE + OVERLAY */}
       <div
         className={`
-          fixed inset-0 z-[3000] md:hidden
+          absolute inset-0 z-[3000] md:hidden
           transition-opacity duration-300
           ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
 
@@ -128,12 +128,12 @@ useEffect(() => {
           <div className="w-28 mx-auto h-[2px] bg-white/40 mb-8"></div>
 
           {/* LINKS */}
-          <nav className="flex flex-col items-center gap-6 text-lg mb-6">
-            <a onClick={() => setOpenMenu(false)} href="#inicio">Início</a>
-            <a onClick={() => setOpenMenu(false)} href="#resultados">Resultados</a>
-            <a onClick={() => setOpenMenu(false)} href="#procedimentos">Procedimentos</a>
-            <a onClick={() => setOpenMenu(false)} href="#sobre">Sobre</a>
-            <a onClick={() => setOpenMenu(false)} href="#clinica">Clínica</a>
+          <nav className="flex flex-col items-center gap-6 text-lg mb-6 text-white !text-white">
+            <a onClick={() => setOpenMenu(false)} href="#inicio" className="text-white !text-white">Início</a>
+            <a onClick={() => setOpenMenu(false)} href="#resultados" className="text-white !text-white">Resultados</a>
+            <a onClick={() => setOpenMenu(false)} href="#procedimentos" className="text-white !text-white">Procedimentos</a>
+            <a onClick={() => setOpenMenu(false)} href="#sobre" className="text-white !text-white">Sobre</a>
+            <a onClick={() => setOpenMenu(false)} href="#clinica" className="text-white !text-white">Clínica</a>
           </nav>
 
           {/* BOTÕES MOBILE */}
