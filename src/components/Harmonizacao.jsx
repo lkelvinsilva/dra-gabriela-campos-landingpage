@@ -14,7 +14,7 @@ export default function Harmonizacao() {
       id: 1,
       title: "Preenchimento Labial",
       desc: "Restaure volumes e contornos com naturalidade. Ideal para suavizar rugas e realçar a beleza facial.",
-      image: "/procedimentos/preenchimento.jpg",
+      image: "/procedimentos/preenchimentoLabial.jpeg",
     },
     {
       id: 2,
