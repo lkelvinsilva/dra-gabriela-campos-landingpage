@@ -5,19 +5,11 @@ export default function Results() {
     <section id="resultados" className="py-20 bg-[#F7F1EE]">
       <div className="container mx-auto px-6">
 
-        <p className="text-center text-lg text-gray-600">
-          A naturalidade é uma junção de pequenos detalhes feitos com excelência.
-        </p>
-
         <h2 className="text-center mt-2 mb-14 font-serif text-4xl text-[var(--vinho)]">
           Confira nossos procedimentos de resina e de estratificação
         </h2>
 
-        <h2 className="text-center mt-2 mb-6 font-serif text-4xl text-[var(--vinho)]">
-          Resina Composta e Estratificação
-        </h2>
-
-        <p className="text-center max-w-3xl mx-auto text-lg text-gray-600 mb-14">
+        <p className="text-center max-w-3xl mx-auto font-serif text-lg text-gray-600 mb-14">
           Cada sorriso é único. A <strong>resina composta</strong> devolve forma e função,
           enquanto a <strong>estratificação</strong> permite reproduzir camadas naturais do dente,
           trazendo mais profundidade, translucidez e harmonia ao sorriso.
