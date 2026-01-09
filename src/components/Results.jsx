@@ -25,7 +25,7 @@ export default function Results() {
           />
 
           <BeforeAfter
-            before="/estratificacao_antes11.jpg"
+            before="/estratificacao_antes11.jpeg"
             after="/estratificacao_depois1.jpeg"
           />
 
