@@ -94,7 +94,7 @@ export default function Footer() {
 
             {/* INSTAGRAM */}
             <a
-              href="https://instagram.com/SEU_USUARIO_AQUI"
+              href="https://instagram.com/dra_gabrielacampos"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition"
