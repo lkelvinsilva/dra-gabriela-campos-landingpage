@@ -10,7 +10,7 @@ export default function Results() {
         </p>
 
         <h2 className="text-center mt-2 mb-14 font-serif text-4xl text-[var(--vinho)]">
-          Confira nossos procedimentos de resina
+          Confira nossos procedimentos de resina e de estratificação
         </h2>
 
         {/* GALERIA */}
@@ -22,8 +22,8 @@ export default function Results() {
           />
 
           <BeforeAfter
-            before="/antes2.jpg"
-            after="/depois2.jpg"
+            before="/estratificacao_antes1.jpg"
+            after="/estratificacao_depois.jpeg"
           />
 
         </div>
