@@ -9,7 +9,7 @@ export default function Results() {
           Confira nossos procedimentos de resina e de estratificação
         </h2>
 
-        <p className="text-center max-w-3xl mx-auto font-serif text-lg text-gray-600 mb-14">
+        <p className="text-center max-w-4xl mx-auto font-serif text-lg text-gray-600 mb-14">
           Cada sorriso é único. A <strong>resina composta</strong> devolve forma e função,
           enquanto a <strong>estratificação</strong> permite reproduzir camadas naturais do dente,
           trazendo mais profundidade, translucidez e harmonia ao sorriso.
@@ -25,8 +25,8 @@ export default function Results() {
           />
 
           <BeforeAfter
-            before="/estratificacao_antes1.jpg"
-            after="/estratificacao_depois.jpeg"
+            before="/estratificacao_antes11.jpg"
+            after="/estratificacao_depois1.jpeg"
           />
 
         </div>
