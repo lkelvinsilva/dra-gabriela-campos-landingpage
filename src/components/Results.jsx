@@ -10,21 +10,23 @@ export default function Results() {
         </h2>
 
         <p className="text-center max-w-4xl mx-auto font-serif text-lg text-gray-600 mb-14">
-          Cada sorriso é único. A <strong>resina composta</strong> devolve forma e função,
-          enquanto a <strong>estratificação</strong> permite reproduzir camadas naturais do dente,
-          trazendo mais profundidade, translucidez e harmonia ao sorriso.
+          Cada sorriso é único. Utilizamos técnicas personalizadas para devolver
+          forma, função e estética com naturalidade e precisão.
         </p>
 
-
         {/* GALERIA */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
 
           <BeforeAfter
+            title="Resina Composta"
+            description="Correção estética com foco em forma, alinhamento e função, proporcionando um sorriso mais equilibrado."
             before="/antes.jpg"
             after="/depois.jpg"
           />
 
           <BeforeAfter
+            title="Estratificação em Resina"
+            description="Técnica avançada que reproduz camadas naturais do dente, garantindo profundidade, translucidez e naturalidade."
             before="/estratificacao_antes11.jpeg"
             after="/estratificacao_depois1.jpeg"
           />
