@@ -12,7 +12,17 @@ export default function BeforeAfter({ before, after, title, description }) {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4">
+    <div className="
+  rounded-3xl
+  bg-gradient-to-b from-[##FFF9F7] to-[#F1E4DF]
+  shadow-xl
+  border border-[rgba(140,58,84,0.12)]
+  p-8
+  transition-all duration-300
+  hover:-translate-y-2
+  hover:shadow-2xl
+">
+
 
       {/* TÍTULO */}
       <h3 className="text-xl font-serif text-[var(--vinho)] mb-2 text-center">
@@ -26,7 +36,7 @@ export default function BeforeAfter({ before, after, title, description }) {
 
       {/* SLIDER BEFORE / AFTER */}
       <div
-        className="relative w-full overflow-hidden rounded-xl cursor-col-resize"
+        className="relative w-full overflow-hidden rounded-xl cursor-col-resize h-100"
         onMouseMove={handleMove}
         onTouchMove={(e) => handleMove(e.touches[0])}
       >
@@ -34,14 +44,14 @@ export default function BeforeAfter({ before, after, title, description }) {
         <img
           src={before}
           alt="Antes"
-          className="w-full object-cover select-none"
+          className="w-full object-cover select-none h-115"
         />
 
         {/* DEPOIS */}
         <img
           src={after}
           alt="Depois"
-          className="w-full object-cover absolute top-0 left-0 h-full"
+          className="w-full object-cover absolute top-0 left-0 h-full h-125"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         />
 

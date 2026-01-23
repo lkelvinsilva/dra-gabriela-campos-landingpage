@@ -34,7 +34,7 @@ export default function Hero() {
           {/* BOTÕES */}
           <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center md:justify-start">
             <a
-              href="https://wa.me/5585992883317"
+              href="https://wa.me/5585991355731"
               target="_blank"
               rel="noreferrer"
               className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white font-serif shadow-md hover:bg-[var(--vinho-2)] transition"

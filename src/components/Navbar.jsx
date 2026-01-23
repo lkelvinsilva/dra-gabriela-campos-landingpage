@@ -55,7 +55,7 @@ useEffect(() => {
         {/* BOTÕES DESKTOP */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="https://wa.me/5585992883317"
+            href="https://wa.me/5585991355731"
             className="px-10 py-3 rounded-full bg-[var(--vinho)] text-white !text-white flex items-center justify-center gap-3"
           >
             <FiPhone className="w-4 h-4" />
@@ -135,7 +135,7 @@ useEffect(() => {
           {/* BOTÕES MOBILE */}
           <div className="mt-4 flex flex-col gap-4">
             <a
-              href="https://wa.me/5585992883317"
+              href="https://wa.me/5585991355731"
               className="px-6 py-3 rounded-full border border-white text-white !text-white flex items-center justify-center gap-3"
             >
               <FiPhone />

@@ -2,11 +2,11 @@ import BeforeAfter from "./BeforeAfter";
 
 export default function Results() {
   return (
-    <section id="resultados" className="py-20 bg-[#F7F1EE]">
+    <section id="resultados" className="py-20 bg-[#FFF9F7]">
       <div className="container mx-auto px-6">
 
         <h2 className="text-center mt-2 mb-14 font-serif text-4xl text-[var(--vinho)]">
-          Confira nossos procedimentos de resina e de estratificação
+          Confira nossos procedimentos de Faceta e de Estratificação
         </h2>
 
         <p className="text-center max-w-4xl mx-auto font-serif text-lg text-gray-600 mb-14">
@@ -18,24 +18,24 @@ export default function Results() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
 
           <BeforeAfter
-            title="Resina Composta"
+            title="Faceta Convencional"
             description="Correção estética com foco em forma, alinhamento e função, proporcionando um sorriso mais equilibrado."
-            before="/antes.jpg"
-            after="/depois.jpg"
+            before="/antes1.jpg"
+            after="/depos1.jpg"
           />
 
           <BeforeAfter
-            title="Estratificação em Resina"
-            description="Técnica avançada que reproduz camadas naturais do dente, garantindo profundidade, translucidez e naturalidade."
-            before="/estratificacao_antes11.jpeg"
-            after="/estratificacao_depois1.jpeg"
+            title="Estratificação em Resina Composta"
+            description="Restauração estética para reparar imperfeições, devolvendo a beleza natural dos dentes."
+            before="/estratificacao_antes.jpeg"
+            after="/estratificacao_depois.jpeg"
           />
 
         </div>
       </div>
           <div className="flex justify-center mt-10">
             <a
-              href="https://wa.me/5585992883317?text=Olá! Gostaria de agendar minha consulta."
+              href="https://wa.me/5585991355731?text=Olá! Gostaria de agendar minha consulta."
               className="inline-flex items-center gap-3 bg-[#8C3A54] text-white !text-white px-8 py-3 rounded-full text-xl font-serif tracking-wide shadow-xl hover:bg-[#732B43] transition-all duration-300"
             >
               {/* Ícone do WhatsApp */}

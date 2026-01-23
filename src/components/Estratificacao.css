@@ -1,0 +1,287 @@
+:root {
+  --vinho: #7b1e3a;
+}
+
+.estratificacao-section {
+.estratificacao-section {
+  padding: 80px 0;
+  background-color: #f7f3ee; /* bege claro elegante */
+}
+
+  font-family: "Playfair Display", serif;
+}
+.estratificacao-card h3 {
+  min-height: 56px; /* força mesma altura visual */
+  display: flex;
+  align-items: flex-end;
+}
+.estratificacao-card p:first-of-type,
+.estratificacao-card ul {
+  margin-top: 12px;
+}
+.estratificacao-card p {
+  margin-bottom: 12px;
+}
+
+.estratificacao-card ul {
+  margin-bottom: 12px;
+}
+/* ANIMAÇÃO BASE */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.estratificacao-card {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.estratificacao-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.estratificacao-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.estratificacao-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .estratificacao-card,
+  .before-after {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+.estratificacao-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.estratificacao-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.estratificacao-card:nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+.estratificacao-card:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.estratificacao-card:nth-child(3) {
+  transition-delay: 0.45s;
+}
+/* =========================
+   ANIMAÇÃO BASE (MOBILE)
+   ========================= */
+
+.estratificacao-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.estratificacao-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* DELAYS NO MOBILE (mais curtos) */
+.estratificacao-card:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.estratificacao-card:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.estratificacao-card:nth-child(3) {
+  transition-delay: 0.18s;
+}
+.estratificacao-card.destaque {
+  transition-delay: inherit;
+}
+
+@media (min-width: 768px) {
+  .estratificacao-card.destaque {
+    transition-delay: 0.3s;
+  }
+}
+
+
+/* TÍTULO PRINCIPAL */
+.section-title {
+  text-align: center;
+  color: var(--vinho);
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 32px; /* aumenta ou diminui */
+}
+
+
+
+/* SUBTÍTULO */
+.section-subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+  color: #5a2a3a;
+  font-size: 1.05rem;
+}
+
+/* PALETA HARMONIZADA COM HERO */
+:root {
+  --vinho: #8c3a54;
+  --vinho-2: #6f2a40;
+  --bege-hero: #fbf4f2;
+  --bege-card: #FBF2EF;
+}
+
+/* GRID DOS CARDS */
+.estratificacao-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+  margin-top: 48px;
+}
+
+/* CARD BASE */
+.estratificacao-card {
+  background: linear-gradient(
+    180deg,
+    var(--bege-card) 0%,
+    #FBF2EF 100%
+  );
+  padding: 40px 36px;
+  border-radius: 24px;
+  border: 1px solid rgba(140, 58, 84, 0.12);
+  box-shadow:
+    0 10px 30px rgba(140, 58, 84, 0.08);
+  font-family: serif;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* DETALHE SUPERIOR (REFINADO) */
+.estratificacao-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 36px;
+  width: 48px;
+  height: 3px;
+  background: var(--vinho);
+  opacity: 0.5;
+  border-radius: 2px;
+}
+
+/* HOVER ELEGANTE */
+.estratificacao-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 45px rgba(140, 58, 84, 0.18);
+}
+
+/* TÍTULO DO CARD */
+.estratificacao-card h3 {
+  color: var(--vinho);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* TEXTO */
+.estratificacao-card p,
+.estratificacao-card li {
+  color: #4a2632;
+  line-height: 1.75;
+  font-size: 0.96rem;
+}
+
+/* LISTAS */
+.estratificacao-card ul {
+  padding-left: 18px;
+  margin-top: 14px;
+}
+
+.estratificacao-card li {
+  margin-bottom: 12px;
+}
+
+/* CARD DESTAQUE (COMO CTA) */
+.estratificacao-card.destaque {
+  background: linear-gradient(
+    180deg,
+    #fdf8f6 0%,
+    #f1dfe6 100%
+  );
+}
+
+/* hover igual aos outros, sem exagero */
+.estratificacao-card.destaque:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 22px 46px rgba(140, 58, 84, 0.22);
+}
+
+
+/* TEXTO DE CONCLUSÃO */
+.conclusao {
+  margin-top: 18px;
+  font-weight: 600;
+  color: var(--vinho);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .estratificacao-cards {
+    gap: 26px;
+  }
+
+  .estratificacao-card {
+    padding: 30px 26px;
+  }
+
+  .estratificacao-card::before {
+    left: 26px;
+  }
+}
+
+/* =========================
+   DESTAQUE NO HOVER (DESKTOP)
+   ========================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .estratificacao-cards:hover .estratificacao-card {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+
+  .estratificacao-card:hover {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 70px rgba(140, 58, 84, 0.35);
+    border-color: var(--vinho);
+    z-index: 2;
+  }
+
+  /* Card destaque mantém elegância */
+  .estratificacao-card.destaque:hover {
+    box-shadow: 0 35px 80px rgba(140, 58, 84, 0.4);
+  }
+}
+

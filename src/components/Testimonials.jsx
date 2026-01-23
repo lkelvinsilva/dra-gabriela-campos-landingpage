@@ -113,7 +113,7 @@ export default function Testimonials() {
 
         {/* Botão CTA */}
         <a
-          href="https://wa.me/5585992883317?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+          href="https://wa.me/5585991355731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
           target="_blank"
           rel="noopener noreferrer"
           className="mt-12 inline-block bg-gradient-to-r from-[#6B1F3A] to-[#6B1F3A]
