@@ -4,14 +4,26 @@ export default function Hero() {
   return (
     <section id="inicio" className="w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative">
       {/* MARCA D'ÁGUA NO FUNDO DO HERO */}
-      <div
-        className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none"
-        style={{
-          backgroundImage: "url('/logo-gc.jpg')",
-          backgroundSize: "60%",
-          left: "-20%", // ajuste se quiser maior ou menor
-        }}>
-      </div>
+{/* MARCA D'ÁGUA – MOBILE */}
+<div
+  className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none md:hidden"
+  style={{
+    backgroundImage: "url('/logo-gc.jpg')",
+    backgroundSize: "120%",
+    left: "-20%",
+  }}
+/>
+
+{/* MARCA D'ÁGUA – DESKTOP */}
+<div
+  className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none hidden md:block"
+  style={{
+    backgroundImage: "url('/logo-gc.jpg')",
+    backgroundSize: "60%",
+    left: "-20%",
+  }}
+/>
+
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* --- TEXTO --- */}
