@@ -10,7 +10,7 @@ export default function Hero() {
   style={{
     backgroundImage: "url('/logo-gc.jpg')",
     backgroundSize: "120%",
-    top: "10%",     // sobe a imagem
+    top: "7%",     // sobe a imagem
     left: "10%",     // joga para a direita
     backgroundPosition: "top center",
   }}
