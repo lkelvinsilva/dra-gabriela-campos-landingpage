@@ -47,9 +47,9 @@ export default function Footer() {
             href="https://www.google.com/maps?q=R.+Monsenhor+Bruno,+1153+-+Meireles,+Fortaleza"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-white text-white !text-white hover:bg-white hover:text-[#5b3c36] transition py-4 px-8 rounded-full"
+            className="border border-white text-white !text-white hover:opacity-90 hover:text-[#5b3c36] transition py-4 px-8 rounded-full"
           >
-            R. MONSENHOR BRUNO, 1153 — MEIRELES, FORTALEZA – CE
+            R. MONSENHOR BRUNO, 1153 — ALDEOTA, FORTALEZA – CE
           </a>
         </div>
       </div>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         <div className="text-sml font-serif text-[var(--vinho)] mb-14">
           <p className="text-lg font-serif mb-3">Endereço</p>
-          <p>R. Monsenhor Bruno, 1153 – Meireles, Fortaleza–CE</p>
+          <p>R. Monsenhor Bruno, 1153 – Aldeota, Fortaleza–CE</p>
 
           <p className="mt-6 mb-6">Estamos à disposição para orientações.</p>
           <p>📞 (85) 9 9288-3317</p>

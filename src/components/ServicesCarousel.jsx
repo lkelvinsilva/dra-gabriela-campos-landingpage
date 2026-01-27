@@ -17,7 +17,7 @@ export default function ServicesCarousel() {
     {
       title: "Clareamento Dental",
       desc: "Ilumine seu sorriso de forma segura. Procedimento que deixa seus dentes mais claros, brilhantes e com aparência saudável.",
-      image: "/procedimentos/clareamento.jpg",
+      image: "/procedimentos/clareamento-dental.jpg",
     },
     {
       title: "Facetas e Resina",
@@ -27,12 +27,12 @@ export default function ServicesCarousel() {
     {
       title: "Limpeza e Profilaxia",
       desc: "Mantenha sua saúde bucal em dia! Remove tártaro e manchas, prevenindo doenças gengivais e crônicas.",
-      image: "/procedimentos/limpeza.jpg",
+      image: "/procedimentos/limpezaDentaria.jpeg",
     },
     {
       title: "Gengivoplastia",
       desc: "Ajuste estético da gengiva, proporcionando maior simetria e harmonia ao sorriso.",
-      image: "/procedimentos/gengiva.jpg",
+      image: "/procedimentos/gengivanova.jpeg",
     },
     {title: "Estratificação de Resina",
       desc: "Repare e embeleze seus dentes com resina composta, restaurando forma e função de maneira natural.",
@@ -75,10 +75,12 @@ export default function ServicesCarousel() {
               >
                 <div className="overflow-hidden">
                   <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-72 w-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+                  src={item.image}
+                  alt={item.title}
+                  className={`h-72 w-full object-cover transition-transform duration-500  ${
+                    item.title === "Gengivoplastia"  ? "object-contain bg-[#F4E7E4]" : "object-cover hover:scale-110"
+                  }`}
+                />
                 </div>
 
                 <div className="p-7">
