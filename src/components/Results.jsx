@@ -28,7 +28,7 @@ export default function Results() {
             title="Estratificação em Resina Composta"
             description="Restauração estética para reparar imperfeições, devolvendo a beleza natural dos dentes."
             before="/estratificacao_antes_paciente.jpeg"
-            after="/estratificacao_depois_paciente.jpeg"
+            after="/estratificaca_depois_paciente.jpeg"
           />
 
         </div>
