@@ -27,15 +27,15 @@ export default function Results() {
           <BeforeAfter
             title="Estratificação em Resina Composta"
             description="Restauração estética para reparar imperfeições, devolvendo a beleza natural dos dentes."
-            before="/estratificacao_antes.jpeg"
-            after="/estratificacao_depois.jpeg"
+            before="/estratificacao_antes_paciente.jpeg"
+            after="/estratificacao_depois_paciente.jpeg"
           />
 
         </div>
       </div>
           <div className="flex justify-center mt-10">
             <a
-              href="https://wa.me/5585991355731?text=Olá! Gostaria de agendar minha consulta."
+              href="https://wa.me/558591295213?text=Olá! Gostaria de agendar minha consulta."
               className="inline-flex items-center gap-3 bg-[#8C3A54] text-white !text-white px-8 py-3 rounded-full text-xl font-serif tracking-wide shadow-xl hover:bg-[#732B43] transition-all duration-300"
             >
               {/* Ícone do WhatsApp */}

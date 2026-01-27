@@ -16,20 +16,20 @@ export default function Testimonials() {
   const depoimentos = [
     {
       nome: "Samuel Soares",
-      data: "2022-08-10",
+      data: "2025-09-10",
       texto:
         "Experiência espetacular, dentista super atenciosa, organizada e o principal, fazendo o melhor para o meu sorriso.",
       foto: "/depoimentos/user3.jpg",
     },
     {
       nome: "Felipe Rodrigues",
-      data: "2022-08-10",
+      data: "2025-08-10",
       texto: "EXCELENTE!!! Valeu cada centavo pago pelo meu procedimento.",
       foto: "/depoimentos/user2.jpg",
     },
     {
       nome: "Caio Dias",
-      data: "2022-08-03",
+      data: "2025-08-03",
       texto: "Excelente profissional!",
       foto: "/depoimentos/user1.jpg",
     },
@@ -113,7 +113,7 @@ export default function Testimonials() {
 
         {/* Botão CTA */}
         <a
-          href="https://wa.me/5585991355731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+          href="https://wa.me/558591295213?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
           target="_blank"
           rel="noopener noreferrer"
           className="mt-12 inline-block bg-gradient-to-r from-[#6B1F3A] to-[#6B1F3A]

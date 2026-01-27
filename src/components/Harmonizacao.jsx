@@ -162,7 +162,7 @@ export default function Harmonizacao() {
 
           <div className="flex justify-start mt-5">
             <a
-              href="https://wa.me/5585991355731?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos."
+              href="https://wa.me/558591295213?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 px-14 py-4 rounded-full shadow-lg text-xl font-semibold transition bg-white text-[var(--vinho)] hover:bg-[#fdf3f4]"
