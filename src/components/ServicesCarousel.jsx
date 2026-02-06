@@ -36,7 +36,7 @@ export default function ServicesCarousel() {
     },
     {title: "Estratificação de Resina",
       desc: "Repare e embeleze seus dentes com resina composta, restaurando forma e função de maneira natural.",
-      image: "/procedimentos/estratificacao_completa.jpg"
+      image: "/procedimentos/estratificacao_card_final.jpg"
     },
   ];
 
