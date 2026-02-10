@@ -3,7 +3,6 @@ import React from "react";
 export default function Hero() {
   return (
     <section id="inicio" className="w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative">
-      {/* MARCA D'ÁGUA NO FUNDO DO HERO */}
 {/* MARCA D'ÁGUA – MOBILE */}
 <div
   className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none md:hidden"
