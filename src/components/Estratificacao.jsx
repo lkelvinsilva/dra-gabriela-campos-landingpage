@@ -58,7 +58,7 @@ export default function Estratificacao() {
               ),
             },
             {
-              title: "Estratificação × Faceta",
+              title: "Faceta com Estratificação x Faceta Convencional",
               destaque: true,
               content: (
                 <>
