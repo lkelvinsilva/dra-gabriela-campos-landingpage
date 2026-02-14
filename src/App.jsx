@@ -6,6 +6,7 @@ import ServicesCarousel from "./components/ServicesCarousel";
 import Harmonizacao from "./components/Harmonizacao";
 import Estratificacao from './components/Estratificacao';
 import Results from "./components/Results";
+import MissaoValores from "./components/mission";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 
@@ -21,6 +22,7 @@ export default function App() {
         <Harmonizacao />
         <Estratificacao />
         <Results />
+        <MissaoValores />
         <Testimonials />
       </main>
 

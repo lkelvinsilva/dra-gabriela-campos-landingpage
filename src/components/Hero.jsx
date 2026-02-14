@@ -3,6 +3,7 @@ import useFade from "../styles/useFade";
 
 export default function Hero() {
    useFade();
+   const mensagem = encodeURIComponent("agendar_site");
   return (
     <section id="inicio" className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative">
 {/* MARCA D'ÁGUA – MOBILE */}
@@ -47,9 +48,11 @@ export default function Hero() {
           </p>
 
           {/* BOTÕES */}
+          
           <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center md:justify-start">
+            
             <a
-              href="https://wa.me/558591295213"
+              href={`https://wa.me/558591295213?text=${mensagem}`}
               target="_blank"
               rel="noreferrer"
               className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white font-serif shadow-md hover:bg-[var(--vinho-2)] transition"
