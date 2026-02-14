@@ -2,7 +2,7 @@ import BeforeAfter from "./BeforeAfter";
 
 export default function Results() {
   return (
-    <section id="resultados" className="py-20 bg-[#FFF9F7]">
+    <section id="resultados" className="section-fade py-20 bg-[#FFF9F7]">
       <div className="container mx-auto px-6">
 
         <h2 className="text-center mt-2 mb-14 font-serif text-4xl text-[var(--vinho)]">

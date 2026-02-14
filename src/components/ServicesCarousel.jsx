@@ -54,7 +54,7 @@ const slideRight = () => {
   ];
 
   return (
-    <section id="procedimentos" className="bg-[#F4E7E4] py-24 relative">
+    <section id="procedimentos" className="section-fade bg-[#F4E7E4] py-24 relative">
       
         <h2 className="text-[40px] font-serif text-[var(--vinho)] leading-tight mb-16 text-center">
           Conheça nossos demais procedimentos

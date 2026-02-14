@@ -1,8 +1,10 @@
 import React from "react";
+import useFade from "../styles/useFade";
 
 export default function Hero() {
+   useFade();
   return (
-    <section id="inicio" className="w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative">
+    <section id="inicio" className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative">
 {/* MARCA D'ÁGUA – MOBILE */}
 <div
   className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none md:hidden"

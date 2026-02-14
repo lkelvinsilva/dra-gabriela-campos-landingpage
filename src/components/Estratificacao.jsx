@@ -1,6 +1,7 @@
 import "./Estratificacao.css";
 import { useEffect, useRef, useState } from "react";
 
+
 export default function Estratificacao() {
   const cardsRef = useRef([]);
   const [activeCard, setActiveCard] = useState(null);
@@ -30,7 +31,7 @@ export default function Estratificacao() {
   };
 
   return (
-    <section className="estratificacao-section" id="estratificacao">
+    <section className="estratificacao-section section-fade" id="estratificacao">
       <div className="container">
         <h2 className="section-title">
           Estratificação: estética natural com preservação do seu sorriso

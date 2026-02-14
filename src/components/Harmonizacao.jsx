@@ -142,7 +142,7 @@ export default function Harmonizacao() {
   return (
     <section
       id="harmonizacao"
-      className="w-full py-20 relative"
+      className="section-fade w-full py-20 relative"
       style={{ backgroundColor: "#6B1F3A" }}
     >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">

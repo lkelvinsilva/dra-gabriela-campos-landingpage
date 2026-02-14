@@ -36,7 +36,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-[#e6d7cc]">
+    <section className="section-fadepy-24 bg-[#e6d7cc]">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Título */}
