@@ -40,7 +40,7 @@ useEffect(() => {
 
         {/* LOGO */}
         <a href="/" className="flex items-center">
-          <img src="/logo-gc.jpg" className="h-16 w-24" alt="Logo" />
+          <img src="/logo.gc.png" className="h-16 w-24" alt="Logo" />
         </a>
 
         {/* MENU DESKTOP */}
@@ -115,7 +115,7 @@ useEffect(() => {
 
           {/* LOGO MOBILE */}
           <div className="flex flex-col items-center mt-6 mb-10">
-            <img src="/logo-gc.jpg" className="w-40 mb-3 rounded-lg" alt="Logo" />
+            <img src="/logo.gc.png" className="w-40 mb-3 rounded-lg" alt="Logo" />
             <p className="text-sm opacity-90">Odontologia Estética</p>
           </div>
 

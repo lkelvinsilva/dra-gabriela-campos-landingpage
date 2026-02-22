@@ -3,7 +3,7 @@ import useFade from "../styles/useFade";
 
 export default function Hero() {
    useFade();
-   const mensagem = encodeURIComponent("agendar_site");
+   const mensagem = encodeURIComponent("Olá, gostaria de agendar uma consulta");
   return (
     <section id="inicio" className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative">
 {/* MARCA D'ÁGUA – MOBILE */}

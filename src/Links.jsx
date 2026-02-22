@@ -6,9 +6,9 @@ export default function Links() {
       <section className="flex flex-col items-center justify-center text-center px-6 pt-24 pb-16">
 
         <img
-          src="/logo-gc.jpg"
+          src="/logo.gc.png"
           alt="Dra. Gabriela Campos"
-          className="w-24 mb-8"
+          className="w-32 mb-10 rounded-lg"
         />
 
         <h1 className="text-3xl md:text-4xl font-light tracking-wide">
@@ -35,23 +35,33 @@ export default function Links() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/SEUNUMERO"
+            href="https://wa.me/5585991295213"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full bg-[#7A1E3A] text-white py-4 rounded-full tracking-widest text-sm text-center transition-all duration-500 hover:bg-[#65162F]"
+            className="block w-full bg-[#7A1E3A] text-white text-white! py-4 rounded-full tracking-widest text-sm text-center transition-all duration-500 hover:bg-[#65162F]"
           >
             AGENDAR PELO WHATSAPP
           </a>
 
           {/* Site */}
           <a
-            href="https://seusite.com.br"
+            href="https://dra-gabriela-campos-landingpage.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full border border-[#7A1E3A] text-[#7A1E3A] py-4 rounded-full tracking-widest text-sm text-center transition-all duration-500 hover:bg-[#7A1E3A] hover:text-white"
+            className="
+            group block w-full
+            border border-[#7A1E3A]
+            py-4 rounded-full
+            tracking-widest text-sm text-center
+            transition-all duration-500
+            hover:bg-[#7A1E3A]
+            "
           >
-            ACESSAR SITE
+            <span className="text-[#7A1E3A] transition-colors duration-500 group-hover:text-white">
+              ACESSAR SITE
+            </span>
           </a>
+          
 
         </div>
       </section>
