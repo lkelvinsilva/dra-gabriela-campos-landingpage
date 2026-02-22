@@ -72,10 +72,10 @@ export default function Links() {
 
           <div>
             <h3 className="text-sm tracking-widest text-[#7A1E3A] mb-4 uppercase">
-              Tecnologia
+              Naturalidade
             </h3>
             <p className="text-sm text-[#555] leading-relaxed">
-              Equipamentos modernos e protocolos atualizados para máxima precisão.
+              Resultados que realçam a beleza única de cada paciente.
             </p>
           </div>
 
