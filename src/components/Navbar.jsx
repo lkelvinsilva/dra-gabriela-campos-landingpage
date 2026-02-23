@@ -40,7 +40,7 @@ useEffect(() => {
 
         {/* LOGO */}
         <a href="/" className="flex items-center">
-          <img src="/logo.gc.png" className="h-16 w-24" alt="Logo" />
+          <img src="/logo.gc.png" className="h-24 w-30" alt="Logo" />
         </a>
 
         {/* MENU DESKTOP */}
