@@ -115,7 +115,7 @@ useEffect(() => {
 
           {/* LOGO MOBILE */}
           <div className="flex flex-col items-center mt-6 mb-10">
-            <img src="/logo.gc.png" className="w-40 mb-3 rounded-lg" alt="Logo" />
+            <img src="/logo-branca.png" className="w-40 mb-3 rounded-lg" alt="Logo" />
             <p className="text-sm opacity-90">Odontologia Estética</p>
           </div>
 
