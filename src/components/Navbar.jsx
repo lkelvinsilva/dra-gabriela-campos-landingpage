@@ -36,11 +36,11 @@ useEffect(() => {
       >
     
       {/* CONTAINER PRINCIPAL */}
-      <div className="section-fade max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="section-fade max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
 
         {/* LOGO */}
         <a href="/" className="flex items-center">
-          <img src="/logo.gc.png" className="h-24 w-30" alt="Logo" />
+          <img src="/logo.gc.png" className="h-24 w-auto" alt="Logo" />
         </a>
 
         {/* MENU DESKTOP */}
