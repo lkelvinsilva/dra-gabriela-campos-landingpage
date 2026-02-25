@@ -8,7 +8,7 @@ export default function Hero() {
     <section id="inicio" className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative">
 {/* MARCA D'ÁGUA – MOBILE */}
 <div
-  className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none md:hidden"
+  className="absolute inset-0 bg-center bg-no-repeat opacity-7 pointer-events-none md:hidden"
   style={{
     backgroundImage: "url('/logo-gc.jpg')",
     backgroundSize: "120%",
@@ -20,7 +20,7 @@ export default function Hero() {
 
 {/* MARCA D'ÁGUA – DESKTOP */}
 <div
-  className="absolute inset-0 bg-center bg-no-repeat opacity-10 pointer-events-none hidden md:block"
+  className="absolute inset-0 bg-center bg-no-repeat opacity-7 pointer-events-none hidden md:block"
   style={{
     backgroundImage: "url('/logo-gc.jpg')",
     backgroundSize: "60%",
@@ -70,21 +70,37 @@ export default function Hero() {
         </div>
 
         {/* --- FOTO --- */}
-      <div className="flex justify-center md:pr-05">
-        <img
-          src="/gabi2.jpg"
-          alt="Dra. Gabriela Campos"
-          className="
-            rounded-xl shadow-lg object-cover
-            w-[220px]          /* tamanho menor no MOBILE */
-            sm:w-[260px]       /* aumenta um pouco no celular maior */
-            md:w-[450px]       /* tamanho normal no DESKTOP */
-            lg:w-[420px]       /* opcional: maior em telas grandes */
-          "
-        />
-      </div>
+      <div className="relative flex justify-center md:justify-end">
 
-      </div>
+  {/* FUNDO DECORATIVO */}
+  <div className="
+    absolute 
+    w-[300px] h-[380px]
+    md:w-[480px] md:h-[580px]
+    bg-gradient-to-br 
+    from-[#EADBD6] 
+    to-[#F6EFEC]
+    rounded-[40px]
+    -z-10
+    translate-x-4 translate-y-6
+  "></div>
+
+  <img
+    src="/gabi2.jpg"
+    alt="Dra. Gabriela Campos"
+    className="
+      relative
+      rounded-2xl
+      shadow-[0_25px_60px_rgba(0,0,0,0.15)]
+      object-cover
+      w-[85%]
+      sm:w-[300px]
+      md:w-[440px]
+      lg:w-[480px]
+    "
+  />
+</div>
+</div>
     </section>
   );
 }
