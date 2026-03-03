@@ -56,22 +56,48 @@ export default function Harmonizacao() {
 /* -------------------------
       CALCULAR LARGURA REAL DO CARD
   ------------------------- */
-  useEffect(() => {
-    const updateWidth = () => {
-      if (scrollRef.current) {
-        const firstCard = scrollRef.current.querySelector(".card-item");
-        if (firstCard) {
-          const gap = 24; // gap-6
-          itemWidth.current = firstCard.offsetWidth + gap;
-        }
+useEffect(() => {
+  const updateWidth = () => {
+    if (scrollRef.current) {
+      const firstCard = scrollRef.current.querySelector(".card-item");
+      if (firstCard) {
+        const gap = 24;
+        itemWidth.current = firstCard.offsetWidth + gap;
       }
-    };
+    }
+  };
 
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
+  updateWidth();
+  window.addEventListener("resize", updateWidth);
 
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
+  return () => window.removeEventListener("resize", updateWidth);
+}, []);
+
+useEffect(() => {
+  let interval;
+
+  const startAutoplay = () => {
+    interval = setInterval(() => {
+      slideRight();
+    }, autoplaySpeed);
+  };
+
+  const stopAutoplay = () => {
+    clearInterval(interval);
+  };
+
+  startAutoplay();
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+  });
+
+  return () => stopAutoplay();
+}, []);
 
   /* -------------------------
       FUNÇÕES DO SLIDE
@@ -125,7 +151,7 @@ export default function Harmonizacao() {
       }
     };
 
-    setTimeout(start, 50);
+    setTimeout(start, 200);
   }, []);
 
   /* -------------------------
@@ -239,4 +265,4 @@ export default function Harmonizacao() {
       </div>
     </section>
   );
-}
+  }
