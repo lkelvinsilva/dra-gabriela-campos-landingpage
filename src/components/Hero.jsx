@@ -11,16 +11,16 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="section-fade w-full pt-20 pb-12 md:pt-40 bg-[#FFF9F7] relative overflow-hidden"
+      className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative overflow-hidden"
     >
       {/* MARCA D'ÁGUA – MOBILE */}
       <div
         className="absolute inset-0 bg-center bg-no-repeat opacity-7 pointer-events-none md:hidden"
         style={{
           backgroundImage: "url('/logo-gc.jpg')",
-          backgroundSize: "120%",
-          top: "7%",
-          left: "10%",
+          backgroundSize: "85%",
+          top: "18%",
+          left: "0%",
           backgroundPosition: "top center",
         }}
       />
