@@ -13,31 +13,37 @@ import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 
 import Links from "./Links";
-
-
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={
-          <>
-            <Navbar />
-            <main>
-              <Hero />
-              <About />
-              <ServicesCarousel />
-              <Harmonizacao />
-              <Estratificacao />
-              <Results />
-              <MissaoValores />
-              <Testimonials />
-              <Footer />
-            </main>
-          </>
-        } />
 
-        <Route path="/links" element={<Links />} />
+        {/* PÁGINA DE ENTRADA */}
+        <Route path="/" element={<Links />} />
+
+        {/* SITE PRINCIPAL */}
+        <Route
+          path="/home"
+          element={
+            <>
+              <Navbar />
+
+              <main>
+                <Hero />
+                <About />
+                <ServicesCarousel />
+                <Harmonizacao />
+                <Estratificacao />
+                <Results />
+                <MissaoValores />
+                <Testimonials />
+                <Footer />
+              </main>
+            </>
+          }
+        />
+
       </Routes>
     </BrowserRouter>
-  )
+  );
 }

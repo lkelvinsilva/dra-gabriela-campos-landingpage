@@ -45,7 +45,7 @@ export default function Links() {
 
           {/* Site */}
           <a
-            href="https://dra-gabriela-campos-landingpage.vercel.app/"
+            href="/home"
             target="_blank"
             rel="noopener noreferrer"
             className="
