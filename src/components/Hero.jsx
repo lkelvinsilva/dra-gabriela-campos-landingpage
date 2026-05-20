@@ -72,46 +72,35 @@ export default function Hero() {
        {/* --- FOTO --- */}
 <div className="relative flex justify-center md:justify-end md:-translate-x-14">
 
-  {/* SOMBRA VINHO SUAVE */}
-  <div
-    className="
-      hidden md:block
-      absolute
-      w-[420px]
-      h-[520px]
-      rounded-[40px]
-      bg-[#8C3A54]
-      opacity-[0.10]
-      blur-3xl
-      -z-10
-      top-6
-      left-6
-    "
-  />
+  
 
   {/* FOTO */}
   <img
-    src="/gabihome.jpeg"
-    alt="Dra. Gabriela Campos"
-    className="
-      relative
-      rounded-[28px]
-      object-cover
+  src="/gabihome.jpeg"
+  alt="Dra. Gabriela Campos"
+  className="
+    relative
+    object-cover
 
-      w-[85%]
-      sm:w-[300px]
-      md:w-[460px]
-      lg:w-[500px]
+    rounded-[34px]
 
-      shadow-[0_20px_60px_rgba(140,58,84,0.18)]
+    border-[5px]
+    border-[#6B1F3A]
 
-      transition-all
-      duration-500
+    w-[85%]
+    sm:w-[300px]
+    md:w-[470px]
+    lg:w-[520px]
 
-      hover:-translate-y-1
-      hover:shadow-[0_30px_80px_rgba(140,58,84,0.28)]
-    "
-  />
+    shadow-[0_20px_60px_rgba(107,31,58,0.22)]
+
+    transition-all
+    duration-500
+
+    hover:scale-[1.01]
+    hover:shadow-[0_28px_80px_rgba(107,31,58,0.35)]
+  "
+/>
 </div>
 </div>
     </section>

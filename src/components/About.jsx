@@ -54,10 +54,31 @@ Harmonização facial (Preenchimento com Ácido Hialurônico, toxina botulínica
         <div className="flex justify-center w-full overflow-hidden">
           <div className="w-full max-w-[360px] md:max-w-md rounded-xl overflow-hidden shadow-xl">
             <img
-              src="/gabiabout.jpeg"
-              alt="Dra Gabriela"
-              className="w-full h-auto max-h-[520px] object-cover"
-            />
+  src="/gabiabout.jpeg"
+  alt="Dra. Gabriela Campos"
+  className="
+    relative
+    object-cover
+
+    rounded-[32px]
+
+    border-[6px]
+    border-[#6B1F3A]
+
+    w-[85%]
+    sm:w-[300px]
+    md:w-[600px]
+    lg:w-[520px]
+    
+    md:translate-x-10
+    shadow-[0_25px_70px_rgba(107,31,58,0.25)]
+
+    transition-all
+    duration-500
+
+    hover:scale-[1.01]
+  "
+/>
           </div>
         </div>
 
