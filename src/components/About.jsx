@@ -54,7 +54,7 @@ Harmonização facial (Preenchimento com Ácido Hialurônico, toxina botulínica
         <div className="flex justify-center w-full overflow-hidden">
           <div className="w-full max-w-[360px] md:max-w-md rounded-xl overflow-hidden shadow-xl">
             <img
-              src="/gabiAbout.jpg"
+              src="/gabiabout.jpeg"
               alt="Dra Gabriela"
               className="w-full h-auto max-h-[520px] object-cover"
             />

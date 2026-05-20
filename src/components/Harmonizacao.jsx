@@ -6,8 +6,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function Harmonizacao() {
   const scrollRef = useRef(null);
-  const itemWidth = useRef(0); // largura aproximada de cada card
-  const autoplaySpeed = 4000; // intervalo do autoplay
+  const itemWidth = useRef(320); // largura aproximada de cada card
+  const autoplaySpeed = 5000; // intervalo do autoplay
+  
 
   const cards = [
     {
@@ -38,7 +39,7 @@ export default function Harmonizacao() {
       id: 5,
       title: "Toxina Botulínica (Botox)",
       desc: "Reduza linhas de expressão e rugas com resultados naturais.",
-      image: "/procedimentos/botox.jpg",
+      image: "/procedimentos/botox.jpeg",
     },
     {
       id: 6,
@@ -73,32 +74,6 @@ useEffect(() => {
   return () => window.removeEventListener("resize", updateWidth);
 }, []);
 
-useEffect(() => {
-  let interval;
-
-  const startAutoplay = () => {
-    interval = setInterval(() => {
-      slideRight();
-    }, autoplaySpeed);
-  };
-
-  const stopAutoplay = () => {
-    clearInterval(interval);
-  };
-
-  startAutoplay();
-
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      stopAutoplay();
-    } else {
-      startAutoplay();
-    }
-  });
-
-  return () => stopAutoplay();
-}, []);
-
   /* -------------------------
       FUNÇÕES DO SLIDE
   ------------------------- */
@@ -121,25 +96,40 @@ useEffect(() => {
   };
 
   /* -------------------------
-      LOOP INFINITO REAL
-  ------------------------- */
-  const handleScroll = () => {
-    if (!scrollRef.current) return;
+    LOOP INFINITO REAL
+------------------------- */
+const handleScroll = () => {
+  if (!scrollRef.current) return;
 
-    const scrollLeft = scrollRef.current.scrollLeft;
-    const size = itemWidth.current;
-    const total = cards.length;
+  const container = scrollRef.current;
 
-    // chegou no clone do início → ir para último real
-    if (scrollLeft <= 0) {
-      scrollRef.current.scrollLeft = total * size;
-    }
+  const maxScroll =
+    container.scrollWidth - container.clientWidth;
 
-    // chegou no clone do final → voltar para primeiro real
-    if (scrollLeft >= (total + 1) * size) {
-      scrollRef.current.scrollLeft = size;
-    }
-  };
+  // chegou no clone inicial
+  if (container.scrollLeft <= 0) {
+    container.style.scrollBehavior = "auto";
+
+    container.scrollLeft =
+      container.scrollWidth -
+      container.clientWidth * 2;
+
+    setTimeout(() => {
+      container.style.scrollBehavior = "smooth";
+    }, 50);
+  }
+
+  // chegou no clone final
+  else if (container.scrollLeft >= maxScroll - 5) {
+    container.style.scrollBehavior = "auto";
+
+    container.scrollLeft = container.clientWidth;
+
+    setTimeout(() => {
+      container.style.scrollBehavior = "smooth";
+    }, 50);
+  }
+};
 
   /* -------------------------
       INICIAR NO PRIMEIRO CARD REAL
@@ -147,10 +137,10 @@ useEffect(() => {
   useEffect(() => {
     const start = () => {
       if (scrollRef.current && itemWidth.current > 0) {
-        scrollRef.current.scrollLeft = itemWidth.current;
+        scrollRef.current.scrollLeft =
+  scrollRef.current.clientWidth;
       }
     };
-
     setTimeout(start, 200);
   }, []);
 
@@ -158,12 +148,17 @@ useEffect(() => {
       AUTOPLAY
   ------------------------- */
   useEffect(() => {
-    const interval = setInterval(() => {
-      slideRight();
-    }, autoplaySpeed);
+  const interval = setInterval(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: itemWidth.current,
+        behavior: "smooth",
+      });
+    }
+  }, autoplaySpeed);
 
-    return () => clearInterval(interval);
-  }, []);
+  return () => clearInterval(interval);
+}, [autoplaySpeed]);
 
   return (
     <section
@@ -247,7 +242,7 @@ useEffect(() => {
                   <div className="relative">
                     <img
                       src={card.image}
-                      className="w-full h-48 object-cover transition-scale duration-500 hover:scale-110"
+                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
                     />
                   </div>
 

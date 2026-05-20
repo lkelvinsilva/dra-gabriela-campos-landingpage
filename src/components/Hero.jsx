@@ -69,34 +69,47 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* --- FOTO --- */}
-      <div className="relative flex justify-center md:justify-end">
+       {/* --- FOTO --- */}
+<div className="relative flex justify-center md:justify-end md:-translate-x-14">
 
-  {/* FUNDO DECORATIVO */}
-  <div className="
-    absolute 
-    w-[300px] h-[380px]
-    md:w-[480px] md:h-[580px]
-    bg-gradient-to-br 
-    from-[#EADBD6] 
-    to-[#F6EFEC]
-    rounded-[40px]
-    -z-10
-    translate-x-4 translate-y-6
-  "></div>
+  {/* SOMBRA VINHO SUAVE */}
+  <div
+    className="
+      hidden md:block
+      absolute
+      w-[420px]
+      h-[520px]
+      rounded-[40px]
+      bg-[#8C3A54]
+      opacity-[0.10]
+      blur-3xl
+      -z-10
+      top-6
+      left-6
+    "
+  />
 
+  {/* FOTO */}
   <img
-    src="/gabi2.jpg"
+    src="/gabihome.jpeg"
     alt="Dra. Gabriela Campos"
     className="
       relative
-      rounded-2xl
-      shadow-[0_25px_60px_rgba(0,0,0,0.15)]
+      rounded-[28px]
       object-cover
+
       w-[85%]
       sm:w-[300px]
-      md:w-[440px]
-      lg:w-[480px]
+      md:w-[460px]
+      lg:w-[500px]
+
+      shadow-[0_20px_60px_rgba(140,58,84,0.18)]
+
+      transition-all
+      duration-500
+
+      hover:-translate-y-1
+      hover:shadow-[0_30px_80px_rgba(140,58,84,0.28)]
     "
   />
 </div>
