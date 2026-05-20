@@ -14,16 +14,22 @@ export default function Hero() {
       className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative overflow-hidden"
     >
       {/* MARCA D'ÁGUA – MOBILE */}
-      <div
-        className="absolute inset-0 bg-center bg-no-repeat opacity-7 pointer-events-none md:hidden"
-        style={{
-          backgroundImage: "url('/logo-gc.jpg')",
-          backgroundSize: "85%",
-          top: "18%",
-          left: "0%",
-          backgroundPosition: "top center",
-        }}
-      />
+<div
+  className="
+    absolute
+    inset-0
+    bg-no-repeat
+    opacity-[0.05]
+    pointer-events-none
+    md:hidden
+    z-0
+  "
+  style={{
+    backgroundImage: "url('/logo-gc.jpg')",
+    backgroundSize: "85%",
+    backgroundPosition: "center 18%",
+  }}
+/>
 
       {/* MARCA D'ÁGUA – DESKTOP */}
       <div

@@ -1,6 +1,6 @@
 export default function Links() {
   return (
-    <div className="min-h-screen bg-[#EDE6DE] text-[#2B2B2B] flex flex-col">
+    <div className="min-h-screen bg-[#FFF9F7] text-[#2B2B2B] flex flex-col font-serif">
 
       {/* HERO */}
       <section className="flex flex-col items-center justify-center text-center px-6 pt-24 pb-16">
@@ -11,18 +11,18 @@ export default function Links() {
           className="w-32 mb-10 rounded-lg"
         />
 
-        <h1 className="text-3xl md:text-4xl font-light tracking-wide">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-[#6B1F3A]">
           Dra. Gabriela Campos
         </h1>
 
-        <p className="mt-4 text-xs tracking-[0.4em] text-[#7A1E3A] uppercase">
+        <p className="mt-4 text-[11px] tracking-[0.35em] text-[#A36A7E] uppercase font-sans">
           Odontologia & Harmonização Facial
         </p>
 
         {/* Linha sofisticada */}
         <div className="w-16 h-[1px] bg-[#7A1E3A] opacity-60 mt-10"></div>
 
-        <p className="mt-10 max-w-md text-sm leading-relaxed text-[#555]">
+        <p className="mt-10 max-w-md text-[16px] leading-8 text-gray-700 font-sans">
           Atendimento personalizado com foco em estética, naturalidade e excelência clínica.
           Uma experiência pensada para quem valoriza qualidade e sofisticação.
         </p>
