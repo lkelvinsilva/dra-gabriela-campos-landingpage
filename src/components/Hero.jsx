@@ -35,7 +35,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"/>
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* --- TEXTO --- */}
         <div className="text-center md:text-left text-[#8C3A54] font-serif px-2 md:px-0">
@@ -51,8 +51,6 @@ export default function Hero() {
               Sorriso!
             </span>
           </h1>
-          {/* FOTO MOBILE */}
-<div className="md:hidden relative flex justify-center mt-8 mb-8"></div>
 
           {/* CARD MOBILE PREMIUM */}
 <div
@@ -209,6 +207,7 @@ export default function Hero() {
     </a>
 
   </div>
+</div>
 </div>
 
         {/* --- FOTO DESKTOP --- */}
