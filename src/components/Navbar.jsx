@@ -36,7 +36,7 @@ useEffect(() => {
       >
     
       {/* CONTAINER PRINCIPAL */}
-      <div className="section-fade max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
 
         {/* LOGO */}
         <a href="/" className="flex items-center">

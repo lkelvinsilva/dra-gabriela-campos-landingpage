@@ -166,7 +166,7 @@ export default function Hero() {
 
         bg-[var(--vinho)]
 
-        text-white
+        text-white !text-white
         text-center
 
         font-serif
