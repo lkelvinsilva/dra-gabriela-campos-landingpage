@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* AGENDAR */}
           <a
-            href="https://wa.me/5585991295213?text=Olá!%20Quero%20agendar%20uma%20consulta."
+            href="https://wa.me/5585991355731?text=Olá!%20Quero%20agendar%20uma%20consulta."
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white text-white !text-white hover:opacity-90 transition py-4 px-8 rounded-full flex items-center gap-2"

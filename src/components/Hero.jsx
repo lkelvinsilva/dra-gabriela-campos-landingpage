@@ -161,7 +161,7 @@ export default function Hero() {
   <div className="w-full flex flex-col gap-4 mt-8">
 
     <a
-      href={`https://wa.me/558591295213?text=${mensagem}`}
+      href={`https://wa.me/5585991355731?text=${mensagem}`}
       target="_blank"
       rel="noreferrer"
       className="

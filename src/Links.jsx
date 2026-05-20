@@ -35,7 +35,7 @@ export default function Links() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/5585991295213"
+            href="https://wa.me/5585991355731"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full bg-[#7A1E3A] text-white text-white! py-4 rounded-full tracking-widest text-sm text-center transition-all duration-500 hover:bg-[#65162F]"
