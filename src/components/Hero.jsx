@@ -31,48 +31,99 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* --- TEXTO --- */}
-        <div className="text-center md:text-left text-[#8C3A54] font-serif">
-          <span className="text-lg md:text-xl opacity-90">Resgate sua</span>
+<div className="text-center md:text-left text-[#8C3A54] font-serif">
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mt-3">
-            Autoestima <br /> através do <span className="text-[var(--vinho)]">Sorriso!</span>
-          </h1>
+  <span className="text-lg md:text-xl opacity-90">
+    Resgate sua
+  </span>
 
-          <p className="font-serif text-base md:text-lg mt-5 leading-relaxed text-gray-700 font-sans">
-            Olá, eu sou a <strong>Dra. Gabriela Campos</strong>, especialista em odontologia estética e harmonização facial.
-            Transformo sorrisos com técnicas precisas e um cuidado totalmente individualizado.
-          </p>
+  <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold leading-tight mt-3">
+    Autoestima <br />
+    através do <span className="text-[var(--vinho)]">Sorriso!</span>
+  </h1>
 
-          <p className="mt-5 font-semibold text-gray-700">
-            Seu novo sorriso começa aqui. Vamos dar o primeiro passo?
-          </p>
+  {/* FOTO MOBILE */}
+  <div className="md:hidden flex justify-center mt-8 mb-8">
+    <img
+      src="/gabihome.jpeg"
+      alt="Dra. Gabriela Campos"
+      className="
+        w-[82%]
+        rounded-[30px]
+        border-[5px]
+        border-[#6B1F3A]
+        shadow-[0_20px_60px_rgba(107,31,58,0.22)]
+        object-cover
+      "
+    />
+  </div>
 
-          {/* BOTÕES */}
-          
-          <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center md:justify-start">
-            
-            <a
-              href={`https://wa.me/558591295213?text=${mensagem}`}
-              target="_blank"
-              rel="noreferrer"
-              className="px-6 py-3 rounded-full bg-[var(--vinho)] text-white !text-white font-serif shadow-md hover:bg-[var(--vinho-2)] transition"
-            >
-              Quero transformar meu sorriso
-            </a>
+  <p
+    className="
+      mt-4
+      text-[18px]
+      md:text-lg
+      leading-8
+      text-gray-700
+      max-w-xl
+      mx-auto
+      md:mx-0
+      font-sans
+    "
+  >
+    Especialista em odontologia estética e harmonização facial.
+    <br className="hidden md:block" />
+    Sorrisos naturais com técnicas modernas e atendimento totalmente personalizado.
+  </p>
 
-            <a
-              href="#resultados"
-              className="px-6 py-3 rounded-full border-2 border-[var(--vinho)] text-[var(--vinho)] font-serif hover:bg-[var(--vinho)] hover:text-white transition text-center"
-            >
-              Ver Resultados
-            </a>
-          </div>
-        </div>
+  <p className="mt-6 font-semibold text-gray-700 text-[18px]">
+    Seu novo sorriso começa aqui.
+  </p>
+
+  {/* BOTÕES */}
+  <div className="flex flex-col md:flex-row gap-4 mt-10 justify-center md:justify-start">
+
+    <a
+      href={`https://wa.me/558591295213?text=${mensagem}`}
+      target="_blank"
+      rel="noreferrer"
+      className="
+        px-6 py-4
+        rounded-full
+        bg-[var(--vinho)]
+        text-white !text-white
+        font-serif
+        shadow-md
+        hover:bg-[var(--vinho-2)]
+        transition
+      "
+    >
+      Quero transformar meu sorriso
+    </a>
+
+    <a
+      href="#resultados"
+      className="
+        px-6 py-4
+        rounded-full
+        border-2
+        border-[var(--vinho)]
+        text-[var(--vinho)]
+        font-serif
+        hover:bg-[var(--vinho)]
+        hover:text-white
+        transition
+        text-center
+      "
+    >
+      Ver Resultados
+    </a>
+
+  </div>
+</div>
 
        {/* --- FOTO --- */}
-<div className="relative flex justify-center md:justify-end md:-translate-x-14">
-
-  
+<div className="hidden md:flex relative justify-end md:-translate-x-14">
 
   {/* FOTO */}
   <img
