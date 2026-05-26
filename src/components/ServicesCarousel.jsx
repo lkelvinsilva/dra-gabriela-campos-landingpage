@@ -30,7 +30,7 @@ const slideRight = () => {
     {
       title: "Clareamento Dental",
       desc: "Ilumine seu sorriso de forma segura. Procedimento que deixa seus dentes mais claros, brilhantes e com aparência saudável.",
-      image: "/procedimentos/clareamento-dental.jpg",
+      image: "/procedimentos/clareamento_atual.jpeg",
     },
     {
       title: "Facetas e Resina",
@@ -45,7 +45,7 @@ const slideRight = () => {
     {
       title: "Gengivoplastia",
       desc: "Ajuste estético da gengiva, proporcionando maior simetria e harmonia ao sorriso.",
-      image: "/procedimentos/gengivanova.jpeg",
+      image: "/procedimentos/gengivoplastia_chat.png",
     },
     {title: "Estratificação de Resina",
       desc: "Repare e embeleze seus dentes com resina composta, restaurando forma e função de maneira natural.",
@@ -84,10 +84,10 @@ const slideRight = () => {
             className="card-item snap-start min-w-[85%] sm:min-w-[420px] lg:min-w-[450px] bg-white rounded-2xl shadow-xl overflow-hidden"
           >
             <img
-              src={item.image}
-              alt={item.title}
-              className="h-72 w-full object-cover"
-            />
+            src={item.image}
+            alt={item.title}
+            className="h-72 w-full object-cover"
+        />
 
             <div className="p-6">
               <h3 className="text-2xl font-serif mb-3">{item.title}</h3>
