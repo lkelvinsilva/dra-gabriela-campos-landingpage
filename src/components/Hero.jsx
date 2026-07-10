@@ -46,33 +46,97 @@ export default function Hero() {
         {/* --- TEXTO --- */}
         <div className="text-center md:text-left text-[#8C3A54] font-serif px-2 md:px-0">
 
-          <span className="text-lg md:text-xl opacity-90">
-            Resgate sua
-          </span>
+          <span
+  className="
+    block
+    text-[20px]
+    md:text-[22px]
+    text-[#8C3A54]
+    font-serif
+    mb-3
+  "
+>
+  Resgate sua
+</span>
 
-          <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold leading-tight mt-3">
-            Autoestima <br />
-            através do{" "}
-            <span className="text-[var(--vinho)]">
-              Sorriso!
-            </span>
-          </h1>
+<h1
+  className="
+    font-serif
+    font-semibold
+
+    text-[58px]
+    leading-[0.95]
+
+    md:text-[86px]
+    lg:text-[94px]
+
+    text-[#6B1F3A]
+  "
+>
+  Autoestima
+  <br />
+
+  <span
+    className="
+      text-[44px]
+      md:text-[56px]
+      text-[#A46C82]
+      font-normal
+    "
+  >
+    através do
+  </span>
+
+  <br />
+
+  <span className="text-[#7A1E3A]">
+    Sorriso!
+  </span>
+</h1>
+
+          {/* TEXTO DESKTOP */}
+<p
+  className="
+    hidden md:block
+
+    mt-8
+
+    max-w-xl
+
+    text-[24px]
+
+    leading-10
+
+    text-[#615B5E]
+
+    font-serif
+  "
+>
+  Olá, eu sou a <strong>Dra. Gabriela Campos</strong>.
+
+  <br />
+  <br />
+
+  Transformo sorrisos com tratamentos personalizados,
+  valorizando a naturalidade, a harmonia e a autoestima
+  de cada paciente.
+</p>
 
           {/* CARD MOBILE PREMIUM */}
 <div
   className="
     md:hidden
     mt-10
-    bg-white/80
+    bg-white/90
     backdrop-blur-xl
 
     border border-[#E8D7DD]
 
-    rounded-[32px]
+    rounded-[38px]
 
     p-6
 
-    shadow-[0_15px_50px_rgba(107,31,58,0.10)]
+    shadow-[0_30px_50px_rgba(107,31,58,0.10)]
 
     flex
     flex-col
@@ -80,7 +144,6 @@ export default function Hero() {
   "
 >
 
-  {/* FOTO */}
   <div className="relative">
 
     {/* GLOW */}
@@ -101,16 +164,16 @@ export default function Hero() {
       alt="Dra. Gabriela Campos"
       className="
         relative
-        w-[220px]
-        h-[300px]
+        w-[260px]
+        h-[350px]
         object-cover
 
-        rounded-[28px]
+        rounded-[34px]
 
         border-[5px]
         border-[#6B1F3A]
 
-        shadow-[0_20px_60px_rgba(107,31,58,0.18)]
+        shadow-[0_30px_50px_rgba(107,31,58,0.18)]
       "
     />
   </div>
@@ -144,18 +207,24 @@ export default function Hero() {
 
   {/* DESCRIÇÃO */}
   <p
-    className="
-      mt-6
-      text-[17px]
-      leading-8
-      text-gray-700
-      text-center
-      font-sans
-    "
-  >
-    Especialista em transformar sorrisos com naturalidade,
-    sofisticação e técnicas modernas.
-  </p>
+  className="
+    mt-6
+
+    text-[20px]
+
+    leading-9
+
+    text-[#666]
+
+    text-center
+
+    font-serif
+  "
+>
+  Especialista em transformar sorrisos
+  com naturalidade, sofisticação e
+  técnicas modernas.
+</p>
 
   {/* BOTÕES */}
   <div className="w-full flex flex-col gap-4 mt-8">
@@ -166,9 +235,10 @@ export default function Hero() {
       rel="noreferrer"
       className="
         w-full
-        py-4
+        py-15
 
         rounded-full
+        tracking-wide
 
         bg-[var(--vinho)]
 
@@ -191,9 +261,10 @@ export default function Hero() {
       href="#resultados"
       className="
         w-full
-        py-4
+        py-15
 
         rounded-full
+        tracking-wide
 
         border-2
         border-[var(--vinho)]
@@ -223,11 +294,11 @@ export default function Hero() {
           <div
             className="
               absolute
-              w-[500px]
-              h-[500px]
+              w-[620px]
+              h-[620px]
               bg-[#7A1E3A]
               rounded-full
-              blur-[120px]
+              blur-[170px]
               opacity-10
               right-10
               top-10
@@ -242,23 +313,23 @@ export default function Hero() {
               relative
               object-cover
 
-              rounded-[34px]
+              rounded-[42px]
 
-              border-[5px]
+              border-[6px]
               border-[#6B1F3A]
 
               w-[85%]
               sm:w-[300px]
-              md:w-[470px]
-              lg:w-[520px]
+              md:w-[540px]
+              lg:w-[590px]
 
-              shadow-[0_20px_60px_rgba(107,31,58,0.22)]
+              shadow-[0_40px_90px_rgba(107,31,58,0.22)]
 
               transition-all
               duration-500
 
               hover:scale-[1.01]
-              hover:shadow-[0_28px_80px_rgba(107,31,58,0.35)]
+              hover:shadow-[0_40px_90px_rgba(107,31,58,0.35)]
             "
           />
         </div>
