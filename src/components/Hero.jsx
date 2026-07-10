@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#FFF9F7] relative overflow-hidden"
+      className="section-fade w-full pt-28 pb-12 md:pt-40 bg-[#F8F2EF] relative overflow-hidden"
     >
       {/* MARCA D'ÁGUA – MOBILE */}
 <div
@@ -41,20 +41,22 @@ export default function Hero() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_0.95fr] gap-24 items-center">
 
         {/* --- TEXTO --- */}
         <div className="text-center md:text-left text-[#8C3A54] font-serif px-2 md:px-0">
 
           <span
   className="
-    block
-    text-[20px]
-    md:text-[22px]
-    text-[#8C3A54]
-    font-serif
-    mb-3
-  "
+block
+text-[15px]
+md:text-[16px]
+uppercase
+tracking-[0.35em]
+text-black/70
+font-serif
+mb-5
+"
 >
   Resgate sua
 </span>
@@ -67,8 +69,8 @@ export default function Hero() {
     text-[58px]
     leading-[0.95]
 
-    md:text-[86px]
-    lg:text-[94px]
+    md:text-[74px]
+    lg:text-[82px]
 
     text-[#6B1F3A]
   "
@@ -80,8 +82,9 @@ export default function Hero() {
     className="
       text-[44px]
       md:text-[56px]
-      text-[#A46C82]
+      text-black/70
       font-normal
+      italic
     "
   >
     através do
@@ -103,7 +106,8 @@ export default function Hero() {
 
     max-w-xl
 
-    text-[24px]
+    text-[20px]
+    leading-[2.1rem]
 
     leading-10
 
@@ -235,7 +239,7 @@ export default function Hero() {
       rel="noreferrer"
       className="
         w-full
-        py-15
+        py-4
 
         rounded-full
         tracking-wide

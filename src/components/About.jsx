@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="section-fade font-serif py-20 bg-[#FFF9F7] overflow-x-hidden"
+      className="section-fade font-serif py-20 bg-[#F6F0EB] overflow-x-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
