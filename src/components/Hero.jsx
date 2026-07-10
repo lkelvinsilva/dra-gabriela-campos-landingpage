@@ -33,7 +33,7 @@ export default function Hero() {
 
       {/* MARCA D'ÁGUA – DESKTOP */}
       <div
-        className="absolute inset-0 bg-center bg-no-repeat opacity-7 pointer-events-none hidden md:block"
+        className="absolute inset-0 bg-center bg-no-repeat opacity-5 pointer-events-none hidden md:block"
         style={{
           backgroundImage: "url('/logo-gc.jpg')",
           backgroundSize: "60%",
@@ -239,23 +239,19 @@ mb-5
       rel="noreferrer"
       className="
         w-full
-        py-4
-
+        py-3
+        px-6
         rounded-full
+        text-[16px]
         tracking-wide
-
         bg-[var(--vinho)]
-
-        text-white !text-white
+        text-white
         text-center
-
         font-serif
-
         shadow-md
-
         hover:bg-[var(--vinho-2)]
-
         transition
+
       "
     >
       Quero transformar meu sorriso
@@ -265,7 +261,8 @@ mb-5
       href="#resultados"
       className="
         w-full
-        py-15
+        py-3
+        px-6
 
         rounded-full
         tracking-wide
@@ -317,10 +314,10 @@ mb-5
               relative
               object-cover
 
-              rounded-[42px]
+              rounded-[32px]
 
-              border-[6px]
-              border-[#6B1F3A]
+              border-[2px]
+              border-[#E8DDD8]
 
               w-[85%]
               sm:w-[300px]
