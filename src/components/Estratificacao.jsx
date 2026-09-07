@@ -74,24 +74,27 @@ function IconCamadaBrilho() {
    CONTEÚDO
    ========================= */
 
-const CAMADAS = [
+const DIFERENCIAIS = [
   {
     numero: "01",
-    titulo: "Dentina — a base da cor",
-    descricao: "É o tom mais forte, que fica por dentro. Dá a cor de fundo do dente.",
-    Icon: IconCamadaBase,
+    titulo: "Cor e profundidade",
+    descricao:
+      "Diferentes tonalidades são combinadas para criar profundidade e reproduzir as nuances naturais do dente.",
+    Icon: IconBrilho,
   },
   {
     numero: "02",
-    titulo: "Corpo — o volume",
-    descricao: "Preenche e ajusta o formato, deixando o dente com o tamanho ideal.",
-    Icon: IconCamadaVolume,
+    titulo: "Formato personalizado",
+    descricao:
+      "O contorno e o volume são construídos de acordo com o formato do seu sorriso e as características de cada dente.",
+    Icon: IconGota,
   },
   {
     numero: "03",
-    titulo: "Esmalte — o brilho",
-    descricao: "A camada final, que reflete a luz e dá aquele aspecto de dente de verdade.",
-    Icon: IconCamadaBrilho,
+    titulo: "Mais naturalidade",
+    descricao:
+      "O objetivo não é deixar todos os dentes iguais, mas criar um resultado harmônico, equilibrado e natural.",
+    Icon: IconEscudo,
   },
 ];
 
@@ -120,24 +123,28 @@ const COMPARATIVO = [
 
 const BENEFICIOS = [
   {
-    titulo: "Preserva seu dente",
-    descricao: "Você sai da consulta com o mesmo dente que entrou, só que mais bonito.",
-    Icon: IconEscudo,
-  },
-  {
-    titulo: "Pronto na hora",
-    descricao: "Resolvido numa única sessão, sem espera.",
-    Icon: IconRelogio,
-  },
-  {
-    titulo: "Parece de verdade",
-    descricao: "Ninguém percebe que foi feito — imita exatamente como o dente é por dentro.",
+    titulo: "Naturalidade em cada detalhe",
+    descricao:
+      "O resultado busca reproduzir as características do seu próprio sorriso, respeitando cor, formato e proporções.",
     Icon: IconBrilho,
   },
   {
-    titulo: "Sem cortes, sem desgaste",
-    descricao: "Um procedimento tranquilo, que dá pra desfazer se precisar.",
+    titulo: "Preservação da estrutura",
+    descricao:
+      "Quando o caso permite, a técnica prioriza uma abordagem conservadora, preservando a estrutura natural do dente.",
+    Icon: IconEscudo,
+  },
+  {
+    titulo: "Um resultado personalizado",
+    descricao:
+      "Cada sorriso é único. A construção é adaptada às características e necessidades de cada paciente.",
     Icon: IconGota,
+  },
+  {
+    titulo: "Praticidade",
+    descricao:
+      "Em casos indicados, o procedimento pode ser realizado em uma única sessão.",
+    Icon: IconRelogio,
   },
 ];
 
@@ -170,17 +177,19 @@ export default function Estratificacao() {
     <section className="estratificacao-section" id="estratificacao" ref={sectionRef}>
       <div className="container">
         <header className="estratificacao-header">
-          <h2 className="section-title">Estratificação dentária</h2>
-          <p className="section-subtitle">
-            Como pintar um quadro, só que com o seu sorriso: camada por
-            camada, até chegar na cor e no brilho que parecem 100% naturais —
-            sem tocar no que já é seu.
-          </p>
-        </header>
+  <h2 className="section-title">Estratificação dentária</h2>
+
+  <p className="section-subtitle">
+    Em vez de simplesmente colocar uma camada de resina sobre o dente,
+    a estratificação reproduz a estrutura e a aparência natural do seu
+    sorriso, trabalhando diferentes camadas de resina para criar cor,
+    profundidade, volume e brilho.
+  </p>
+</header>
 
         {/* ETAPAS: cards numerados, sem ilustração */}
         <div className="camadas-grid">
-          {CAMADAS.map((c, i) => (
+          {DIFERENCIAIS.map((c, i) => (
             <div className="camada-card" key={c.numero}>
               <span className="camada-card-numero">{c.numero}</span>
               <span className="camada-card-icone">
@@ -188,7 +197,7 @@ export default function Estratificacao() {
               </span>
               <h3>{c.titulo}</h3>
               <p>{c.descricao}</p>
-              {i < CAMADAS.length - 1 && (
+              {i < DIFERENCIAIS.length - 1 && (
                 <span className="camada-card-seta" aria-hidden="true">
                   →
                 </span>
