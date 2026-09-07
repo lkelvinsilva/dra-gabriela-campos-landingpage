@@ -140,6 +140,7 @@ export default function Hero() {
               m-0
             "
           >
+            Renove sua
             Autoestima através do sorriso
           </h1>
 
