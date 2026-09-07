@@ -1,84 +1,88 @@
-
 import React from "react";
 
 export default function About() {
   return (
     <section
       id="sobre"
-      className="section-fade font-serif py-20 bg-[#F6F0EB] overflow-x-hidden"
+      className="section-fade py-20 md:py-32 bg-[#F6F0EB]"
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-        {/* TEXTO */}
-        <div className="w-full">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--vinho)]">
-            Sobre a Dra. Gabriela Campos
-          </h2>
-
-          <p className="font-serif text-lg md:text-xl text-gray-700 leading-relaxed mt-6 font-sans">
-            A Dra. Gabriela Campos é especialista em odontologia estética e harmonização
-            facial, unindo precisão técnica e cuidado humano em cada atendimento.
-          </p>
-
-          <p className="font-serif text-lg md:text-xl text-gray-700 leading-relaxed mt-6 font-sans">
-            Cirurgiã-dentista formada pela UNIFOR, possui trajetória marcada pela excelência,
-            sensibilidade clínica e constante atualização.
-          </p>
-
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed italic mt-6">
-            “Meu propósito é transformar sorrisos e, com eles, transformar vidas.”
-            <br />
-            <span className="font-semibold not-italic text-[var(--vinho)]">
-              — Dra. Gabriela Campos
-            </span>
-          </p>
-          {/* CARD ESPECIALIDADES */}
-<div className="mt-10 bg-[#F4E3E0]/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-[var(--vinho)]">
-
-  
-  <h3 className="text-lg md:text-xl font-semibold text-[var(--vinho)] mb-4">
-    Especialidades
-  </h3>
-
-  <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-    Estética dental (facetas em resina, harmonização do sorriso, clareamento dentário, ajustes, gengivoplastia e restaurações esteticas); 
-Clínica geral (extrações simples e complexas, limpeza, dentistica restauradoras);
-Harmonização facial (Preenchimento com Ácido Hialurônico, toxina botulínica - botox, bioestimuladores de colágeno, bichectomia e skinbooster)
-  </p>
-
-</div>
-
-        </div>
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.05fr_1fr] gap-14 md:gap-20 items-center">
 
         {/* FOTO */}
-        <div className="flex justify-center w-full overflow-hidden">
-          <div className="w-full max-w-[360px] md:max-w-md rounded-xl overflow-hidden shadow-xl">
-            <img
-  src="/gabiabout.jpeg"
-  alt="Dra. Gabriela Campos"
-  className="
-    relative
-    object-cover
+        <div className="relative flex justify-center md:justify-start">
+          {/* moldura vazada atrás da foto */}
+          <div className="absolute w-[85%] sm:w-[380px] md:w-[420px] lg:w-[480px] aspect-[4/5] border border-[var(--vinho)]/40 top-6 left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0" />
+          <img
+            src="/gabiabout.jpeg"
+            alt="Dra. Gabriela Campos"
+            className="
+              relative
+              w-[85%] sm:w-[380px] md:w-[420px] lg:w-[480px]
+              aspect-[4/5] object-cover
+              -translate-x-3 -translate-y-3
+              md:translate-x-3 md:-translate-y-3
+              shadow-[0_30px_60px_-15px_rgba(43,33,24,0.35)]
+            "
+          />
+        </div>
 
-    rounded-[32px]
+        {/* TEXTO */}
+<div className="w-full max-w-xl">
+  <span className="block font-serif italic text-lg md:text-xl text-[var(--vinho)]/70 mb-3">
+    Sobre
+  </span>
 
-    border-[6px]
-    border-[#6B1F3A]
+  <h2 className="font-serif font-light text-4xl md:text-5xl text-[#2B2118] tracking-tight leading-[1.1]">
+    Dra. Gabriela Campos
+  </h2>
 
-    w-[85%]
-    sm:w-[300px]
-    md:w-[600px]
-    lg:w-[520px]
-    
-    md:translate-x-10
-    shadow-[0_25px_70px_rgba(107,31,58,0.25)]
+  <p className="text-base md:text-lg text-[#2B2118]/80 leading-relaxed mt-6">
+    Especialista em odontologia estética e harmonização facial, unindo precisão
+    técnica e cuidado humano em cada atendimento.
+  </p>
 
-    transition-all
-    duration-500
 
-    hover:scale-[1.01]
-  "
-/>
+          {/* ESPECIALIDADES */}
+          <div className="mt-10 divide-y divide-[var(--vinho)]/15 border-t border-[var(--vinho)]/15">
+            {[
+              {
+                titulo: "Estética dental",
+                texto:
+                  "Facetas em resina, harmonização do sorriso, clareamento dentário, gengivoplastia e restaurações estéticas.",
+              },
+              {
+                titulo: "Clínica geral",
+                texto:
+                  "Extrações simples e complexas, limpeza e dentística restauradora.",
+              },
+              {
+                titulo: "Harmonização facial",
+                texto:
+                  "Ácido hialurônico, toxina botulínica, bioestimuladores de colágeno, bichectomia e skinbooster.",
+              },
+            ].map((item) => (
+              <div key={item.titulo} className="py-5 grid grid-cols-[1fr_2fr] gap-4 md:gap-8">
+                <h3 className="font-serif text-base md:text-lg text-[var(--vinho)]">
+                  {item.titulo}
+                </h3>
+                <p className="text-sm md:text-base text-[#2B2118]/75 leading-relaxed">
+                  {item.texto}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CITAÇÃO */}
+          <div className="mt-12 relative pl-8">
+            <span className="absolute -left-1 -top-4 font-serif text-6xl text-[var(--vinho)]/25 select-none">
+              "
+            </span>
+            <p className="font-serif text-lg md:text-xl text-[#2B2118] leading-snug">
+              Meu propósito é transformar sorrisos e, com eles, transformar vidas.
+            </p>
+            <span className="block mt-3 text-sm text-[var(--vinho)] tracking-wide">
+              Dra. Gabriela Campos
+            </span>
           </div>
         </div>
 
@@ -86,5 +90,3 @@ Harmonização facial (Preenchimento com Ácido Hialurônico, toxina botulínica
     </section>
   );
 }
-
-

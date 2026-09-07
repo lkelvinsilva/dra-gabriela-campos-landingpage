@@ -15,6 +15,7 @@ export default function BeforeAfter({ before, after, title, description }) {
   return (
     <div
       className="
+        mx-auto w-full max-w-md md:max-w-none
         rounded-3xl
         bg-gradient-to-b from-[#FFF9F7] to-[#F1E4DF]
         shadow-xl
@@ -39,7 +40,8 @@ export default function BeforeAfter({ before, after, title, description }) {
       <div
         ref={containerRef}
         className="
-          relative w-full h-[420px]
+          relative w-full mx-auto
+          h-[320px] sm:h-[420px]
           overflow-hidden rounded-2xl
           cursor-col-resize
           select-none touch-none
@@ -51,14 +53,14 @@ export default function BeforeAfter({ before, after, title, description }) {
         <img
           src={before}
           alt="Antes"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
         {/* DEPOIS */}
         <img
           src={after}
           alt="Depois"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         />
 

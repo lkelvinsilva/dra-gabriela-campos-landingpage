@@ -1,30 +1,16 @@
+
 "use client";
-import React, { useRef } from "react";
-import { FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
+
+import React, { useRef, useState, useEffect } from "react";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaArrowRight,
+} from "react-icons/fa";
 
 export default function ServicesCarousel() {
   const scrollRef = useRef(null);
-
-const getCardWidth = () => {
-  if (!scrollRef.current) return 0;
-  const card = scrollRef.current.querySelector("div");
-  return card ? card.getBoundingClientRect().width + 24 : 0; // 24 = gap-6
-};
-
-const slideLeft = () => {
-  scrollRef.current?.scrollBy({
-    left: -getCardWidth(),
-    behavior: "smooth",
-  });
-};
-
-const slideRight = () => {
-  scrollRef.current?.scrollBy({
-    left: getCardWidth(),
-    behavior: "smooth",
-  });
-};
-
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const items = [
     {
@@ -47,78 +33,307 @@ const slideRight = () => {
       desc: "Ajuste estético da gengiva, proporcionando maior simetria e harmonia ao sorriso.",
       image: "/procedimentos/gengivoplastia_chat.png",
     },
-    {title: "Estratificação de Resina",
+    {
+      title: "Estratificação de Resina",
       desc: "Repare e embeleze seus dentes com resina composta, restaurando forma e função de maneira natural.",
-      image: "/procedimentos/estratificacao_card_final.jpg"
+      image: "/procedimentos/estratificacao_card_final.jpg",
     },
   ];
 
+  const getStep = () => {
+    const track = scrollRef.current;
+
+    if (!track) return 0;
+
+    const card = track.querySelector(".card-item");
+
+    if (!card) return 0;
+
+    const gap = parseFloat(
+      getComputedStyle(track).columnGap || "24"
+    );
+
+    return card.getBoundingClientRect().width + gap;
+  };
+
+  const slideLeft = () => {
+    scrollRef.current?.scrollBy({
+      left: -getStep(),
+      behavior: "smooth",
+    });
+  };
+
+  const slideRight = () => {
+    scrollRef.current?.scrollBy({
+      left: getStep(),
+      behavior: "smooth",
+    });
+  };
+
+  // Atualiza o índice ativo conforme o usuário rola
+  useEffect(() => {
+    const track = scrollRef.current;
+
+    if (!track) return;
+
+    const onScroll = () => {
+      const step = getStep();
+
+      if (!step) return;
+
+      const index = Math.round(track.scrollLeft / step);
+
+      setActiveIndex(
+        Math.min(index, items.length - 1)
+      );
+    };
+
+    track.addEventListener("scroll", onScroll, {
+      passive: true,
+    });
+
+    return () => {
+      track.removeEventListener("scroll", onScroll);
+    };
+  }, [items.length]);
+
+  const goToIndex = (index) => {
+    const step = getStep();
+
+    scrollRef.current?.scrollTo({
+      left: step * index,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section id="procedimentos" className="section-fade bg-[#F4E7E4] py-24 relative">
-      
-        <h2 className="text-[40px] font-serif text-[var(--vinho)] leading-tight mb-16 text-center">
-          Conheça nossos demais procedimentos
-        </h2>
+    <section
+      id="procedimentos"
+      className="section-fade bg-[#F4E7E4] py-24 relative"
+    >
+      {/* Título */}
+      <h2
+        className="
+          text-3xl
+          md:text-[40px]
+          font-serif
+          text-[var(--vinho)]
+          leading-tight
+          mb-16
+          text-center
+          px-6
+        "
+      >
+        Conheça nossos demais procedimentos
+      </h2>
 
-        {/* Fades laterais */}
-        <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#F4E7E4] to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#F4E7E4] to-transparent pointer-events-none z-10"></div>
+      {/* Fades laterais */}
+      <div
+        className="
+          absolute
+          left-0
+          top-0
+          h-full
+          w-10
+          md:w-20
+          bg-gradient-to-r
+          from-[#F4E7E4]
+          to-transparent
+          pointer-events-none
+          z-10
+        "
+      />
 
-          {/* Botão esquerdo */}
-          <button
-            onClick={slideLeft}
-            className="absolute -left-6 top-1/2 -translate-y-1/2 z-20 bg-[#E3C7B8] 
-            text-[var(--vinho)] p-5 rounded-full shadow-xl hover:bg-[#D7B5A4] transition"
-          >
-            <FaChevronLeft size={24} />
-          </button>
+      <div
+        className="
+          absolute
+          right-0
+          top-0
+          h-full
+          w-10
+          md:w-20
+          bg-gradient-to-l
+          from-[#F4E7E4]
+          to-transparent
+          pointer-events-none
+          z-10
+        "
+      />
 
-          {/* Carrossel */}
-              <div
+      {/* Botão esquerdo — desktop */}
+      <button
+        onClick={slideLeft}
+        aria-label="Procedimento anterior"
+        className="
+          hidden
+          md:flex
+          absolute
+          left-6
+          top-1/2
+          -translate-y-1/2
+          z-20
+          bg-[#E3C7B8]
+          text-[var(--vinho)]
+          p-5
+          rounded-full
+          shadow-xl
+          hover:bg-[#D7B5A4]
+          transition
+        "
+      >
+        <FaChevronLeft size={24} />
+      </button>
+
+      {/* Carrossel */}
+      <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4"
+        className="
+          flex
+          gap-6
+          overflow-x-auto
+          scroll-smooth
+          snap-x
+          snap-mandatory
+          px-[7.5%]
+          sm:px-6
+          md:px-24
+          overscroll-x-contain
+          [-ms-overflow-style:none]
+          [scrollbar-width:none]
+          [&::-webkit-scrollbar]:hidden
+        "
       >
         {items.map((item) => (
           <div
             key={item.title}
-            className="card-item snap-start min-w-[85%] sm:min-w-[420px] lg:min-w-[450px] bg-white rounded-2xl shadow-xl overflow-hidden"
+            className="
+              card-item
+              snap-center
+              shrink-0
+              w-[85%]
+              sm:w-[420px]
+              lg:w-[450px]
+              bg-white
+              rounded-2xl
+              shadow-xl
+              overflow-hidden
+            "
           >
             <img
-            src={item.image}
-            alt={item.title}
-            className="h-72 w-full object-cover"
-        />
+              src={item.image}
+              alt={item.title}
+              className="
+                h-64
+                md:h-72
+                w-full
+                object-cover
+              "
+            />
 
             <div className="p-6">
-              <h3 className="text-2xl font-serif mb-3">{item.title}</h3>
-              <p>{item.desc}</p>
+              <h3
+                className="
+                  text-xl
+                  md:text-2xl
+                  font-serif
+                  mb-3
+                "
+              >
+                {item.title}
+              </h3>
+
+              <p
+                className="
+                  text-sm
+                  md:text-base
+                "
+              >
+                {item.desc}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
-          {/* Botão direito */}
-          <button
-            onClick={slideRight}
-            className="absolute -right-6 top-1/2 -translate-y-1/2 z-20 bg-[#E3C7B8] 
-            text-[var(--vinho)] p-5 rounded-full shadow-xl hover:bg-[#D7B5A4] transition"
-          >
-            <FaChevronRight size={24} />
-          </button>
+      {/* Botão direito — desktop */}
+      <button
+        onClick={slideRight}
+        aria-label="Próximo procedimento"
+        className="
+          hidden
+          md:flex
+          absolute
+          right-6
+          top-1/2
+          -translate-y-1/2
+          z-20
+          bg-[#E3C7B8]
+          text-[var(--vinho)]
+          p-5
+          rounded-full
+          shadow-xl
+          hover:bg-[#D7B5A4]
+          transition
+        "
+      >
+        <FaChevronRight size={24} />
+      </button>
 
-        {/* CTA botão final */}
-        <div className="flex justify-center mt-10">
-          <a
-            href="https://wa.me/5585991355731?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-4 bg-[var(--vinho)] text-white !text-white px-14 py-5 rounded-full 
-            shadow-lg text-xl font-semibold hover:bg-[#6b2539] transition"
-          >
-            TRANSFORME SEU SORRISO
-           <FaArrowRight />
+      {/* Dots — mobile */}
+      <div className="flex md:hidden justify-center gap-2 mt-6">
+        {items.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goToIndex(i)}
+            aria-label={`Ir para procedimento ${i + 1}`}
+            className={`
+              h-2
+              rounded-full
+              transition-all
+              ${
+                activeIndex === i
+                  ? "w-6 bg-[var(--vinho)]"
+                  : "w-2 bg-[var(--vinho)]/30"
+              }
+            `}
+          />
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="flex justify-center mt-10 px-6">
+        <a
+          href="https://wa.me/5585991355731?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex
+            items-center
+            gap-3
+            md:gap-4
+            bg-[var(--vinho)]
+            text-white
+            !text-white
+            px-8
+            md:px-14
+            py-4
+            md:py-5
+            rounded-full
+            shadow-lg
+            text-base
+            md:text-xl
+            font-semibold
+            hover:bg-[#6b2539]
+            transition
+            text-center
+          "
+        >
+          TRANSFORME SEU SORRISO
+
+          <FaArrowRight />
         </a>
       </div>
     </section>
   );
 }
+

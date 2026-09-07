@@ -129,20 +129,25 @@ export default function Hero() {
         </div>
 
         {/* TEXTO PRINCIPAL MOBILE */}
-        <div className="px-[22px] pt-[30px]">
-          <h1
-            className="
-              font-serif
-              font-normal
-              text-[32px]
-              leading-[1.22]
-              text-[#2A2320]
-              m-0
-            "
-          >
+      <div className="px-[22px] pt-[30px]">
+        <h1
+          className="
+            font-serif
+            font-normal
+            leading-[1.22]
+            text-[#2A2320]
+            m-0
+          "
+        >
+          <span className="text-[24px]">
             Renove sua
+          </span>
+          <br />
+          <span className="text-[32px]">
             Autoestima através do sorriso
-          </h1>
+          </span>
+        </h1>
+
 
           <p
             className="
@@ -208,7 +213,7 @@ export default function Hero() {
                 text-[#F7F3EE]
               "
             >
-              8 anos
+              5 anos
             </div>
 
             <div
@@ -240,7 +245,7 @@ export default function Hero() {
                 text-[#F7F3EE]
               "
             >
-              CRO 12345
+              CRO 13.116
             </div>
 
             <div
@@ -484,7 +489,7 @@ export default function Hero() {
 
             <div>
               <p className="font-serif text-[18px] text-[#3A3436] m-0">
-                8 anos
+                5 anos
               </p>
               <p className="text-[9px] tracking-[0.12em] text-[#9C8A82] mt-[3px]">
                 EXPERIÊNCIA
