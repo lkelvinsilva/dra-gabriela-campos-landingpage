@@ -60,35 +60,7 @@ export default function Hero() {
       ========================================================= */}
       <div className="md:hidden relative z-10 w-full max-w-[480px] mx-auto">
         {/* HEADER MOBILE */}
-        <header className="flex items-center justify-between px-[22px] py-[22px]">
-          <div
-            className="
-              font-serif
-              text-[13px]
-              tracking-[0.18em]
-              text-[#6B1E33]
-            "
-          >
-            GABRIELA CAMPOS
-          </div>
-
-          <button
-            type="button"
-            className="
-              bg-transparent
-              border-0
-              flex
-              flex-col
-              gap-[5px]
-              cursor-pointer
-              p-[6px]
-            "
-            aria-label="Abrir menu"
-          >
-            <span className="block w-[22px] h-[1.5px] bg-[#2A2320]" />
-            <span className="block w-[22px] h-[1.5px] bg-[#2A2320]" />
-          </button>
-        </header>
+        <header className="h-[22px]" />
 
         {/* FOTO MOBILE */}
         <div
