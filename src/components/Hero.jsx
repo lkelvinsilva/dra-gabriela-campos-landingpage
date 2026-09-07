@@ -56,7 +56,7 @@ export default function Hero() {
 
       {/* =========================================================
           HERO MOBILE
-          NOVO LAYOUT
+          NÃO ALTERADO
       ========================================================= */}
       <div className="md:hidden relative z-10 w-full max-w-[480px] mx-auto">
         {/* HEADER MOBILE */}
@@ -353,7 +353,7 @@ export default function Hero() {
 
       {/* =========================================================
           HERO DESKTOP
-          MANTIDO COMO ESTAVA
+          NOVA VERSÃO — editorial, sofisticada, premium
       ========================================================= */}
       <div
         className="
@@ -362,128 +362,215 @@ export default function Hero() {
           max-w-7xl
           mx-auto
           px-6
-          grid-cols-1
-          md:grid-cols-[1fr_0.95fr]
-          gap-24
+          md:grid-cols-[1fr_0.9fr]
+          gap-20
           items-center
           relative
           z-10
         "
       >
         {/* TEXTO DESKTOP */}
-        <div
-          className="
-            text-center
-            md:text-left
-            text-[#8C3A54]
-            font-serif
-            px-2
-            md:px-0
-          "
-        >
-          <span
-            className="
-              block
-              text-[16px]
-              uppercase
-              tracking-[0.35em]
-              text-black/70
-              font-serif
-              mb-5
-            "
-          >
-            Resgate sua
-          </span>
-
-          <h1
-            className="
-              font-serif
-              font-semibold
-              text-[74px]
-              lg:text-[82px]
-              leading-[0.95]
-              text-[#6B1F3A]
-            "
-          >
-            Autoestima
-            <br />
-
-            <span
-              className="
-                text-[56px]
-                text-black/70
-                font-normal
-                italic
-              "
-            >
-              através do
-            </span>
-
-            <br />
-
-            <span className="text-[#7A1E3A]">Sorriso!</span>
-          </h1>
+        <div className="text-left">
+          {/* traço fino de assinatura */}
+          <div className="w-9 h-px bg-[#6B1F3A] mb-6" />
 
           <p
             className="
-              hidden
-              md:block
-              mt-8
-              max-w-xl
-              text-[20px]
-              leading-10
-              text-[#615B5E]
-              font-serif
+              text-[11px]
+              tracking-[0.3em]
+              font-medium
+              text-[#9C8A82]
+              mb-5
+              uppercase
             "
           >
-            Olá, eu sou a <strong>Dra. Gabriela Campos</strong>.
-            <br />
-            <br />
-            Transformo sorrisos com tratamentos personalizados, valorizando a
-            naturalidade, a harmonia e a autoestima de cada paciente.
+            Odontologia Estética &amp; Harmonização Facial
           </p>
+
+          <h1
+  className="
+    font-serif
+    font-normal
+    text-[52px]
+    lg:text-[60px]
+    leading-[1.12]
+    text-[#3A3436]
+    m-0
+  "
+>
+  <span className="text-[38px] lg:text-[44px]">
+    Renove sua
+  </span>
+  <br />
+
+  Autoestima
+  <br />
+
+  através do{" "}
+  <span className="italic text-[#6B1F3A]">
+    sorriso
+  </span>
+</h1>
+          <p
+            className="
+              mt-7
+              max-w-[38ch]
+              text-[15px]
+              leading-[1.75]
+              text-[#615B5E]
+            "
+          >
+            Olá, eu sou a <strong className="text-[#3A3436]">Dra. Gabriela
+            Campos</strong>. Transformo sorrisos com tratamentos
+            personalizados, valorizando a naturalidade, a harmonia e a
+            autoestima de cada paciente.
+          </p>
+
+          {/* CTAs DESKTOP */}
+          <div className="flex items-center gap-8 mt-9">
+            <a
+              href={`https://wa.me/5585991355731?text=${mensagem}`}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                no-underline
+                bg-[#6B1F3A]
+                !text-white
+                text-[12px]
+                tracking-[0.08em]
+                font-medium
+                uppercase
+                py-[15px]
+                px-[30px]
+                transition-opacity
+                duration-150
+                hover:opacity-90
+              "
+            >
+              Agendar consulta
+            </a>
+
+            <a
+              href="#resultados"
+              className="
+                no-underline
+                text-[12.5px]
+                tracking-[0.02em]
+                text-[#3A3436]
+                border-b
+                border-[#3A3436]
+                pb-[3px]
+                transition-opacity
+                duration-150
+                hover:opacity-70
+              "
+            >
+              Conheça meu trabalho →
+            </a>
+          </div>
+
+          {/* INDICADORES DESKTOP */}
+          <div className="flex items-center gap-6 mt-12">
+            <div>
+              <p className="font-serif text-[18px] text-[#3A3436] m-0">
+                500+
+              </p>
+              <p className="text-[9px] tracking-[0.12em] text-[#9C8A82] mt-[3px]">
+                PACIENTES
+              </p>
+            </div>
+
+            <div className="w-px h-[26px] bg-[#6B1F3A]/20" />
+
+            <div>
+              <p className="font-serif text-[18px] text-[#3A3436] m-0">
+                8 anos
+              </p>
+              <p className="text-[9px] tracking-[0.12em] text-[#9C8A82] mt-[3px]">
+                EXPERIÊNCIA
+              </p>
+            </div>
+
+            <div className="w-px h-[26px] bg-[#6B1F3A]/20" />
+
+            <div>
+              <p className="font-serif text-[18px] text-[#3A3436] m-0">
+                CRO ativo
+              </p>
+              <p className="text-[9px] tracking-[0.12em] text-[#9C8A82] mt-[3px]">
+                REGISTRO
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* FOTO DESKTOP */}
-        <div className="relative justify-end md:-translate-x-14 hidden md:flex">
-          {/* GLOW VINHO */}
-          <div
-            className="
-              absolute
-              w-[620px]
-              h-[620px]
-              bg-[#7A1E3A]
-              rounded-full
-              blur-[170px]
-              opacity-10
-              right-10
-              top-10
-            "
-          />
+<div className="relative flex justify-center w-full">
+  {/* GLOW VINHO, mais sutil */}
+  <div
+    className="
+      absolute
+      w-[75%]
+      aspect-square
+      max-w-[520px]
+      bg-[#7A1E3A]
+      rounded-full
+      blur-[130px]
+      opacity-[0.12]
+      top-6
+      right-6
+    "
+  />
 
-          {/* FOTO */}
-          <img
-            src="/gabihome.jpeg"
-            alt="Dra. Gabriela Campos"
-            className="
-              relative
-              object-cover
-              rounded-[32px]
-              border-[2px]
-              border-[#E8DDD8]
-              w-[85%]
-              sm:w-[300px]
-              md:w-[540px]
-              lg:w-[590px]
-              shadow-[0_40px_90px_rgba(107,31,58,0.22)]
-              transition-all
-              duration-500
-              hover:scale-[1.01]
-              hover:shadow-[0_40px_90px_rgba(107,31,58,0.35)]
-            "
-          />
-        </div>
-      </div>
+  {/* BLOCO SÓLIDO DESLOCADO ATRÁS DA FOTO */}
+  <div
+    className="
+      absolute
+      w-[85%]
+      max-w-[440px]
+      aspect-[3/4]
+      bg-[#6B1F3A]
+      top-6
+      left-6
+    "
+  />
+
+  {/* FOTO */}
+  <img
+    src="/gabihome.jpeg"
+    alt="Dra. Gabriela Campos"
+    className="
+      relative
+      object-cover
+      w-[85%]
+      max-w-[440px]
+      aspect-[3/4]
+      xl:max-w-[500px]
+    "
+  />
+
+  {/* CARTÃO DE ASSINATURA */}
+  <div
+    className="
+      absolute
+      left-2
+      bottom-10
+      bg-[#F8F2EF]
+      border
+      border-[#6B1F3A]/25
+      py-[16px]
+      px-[20px]
+    "
+  >
+    <p className="font-serif text-[14px] text-[#3A3436] m-0">
+      Dra. Gabriela Campos
+    </p>
+    <p className="text-[9px] tracking-[0.1em] text-[#9C8A82] mt-[3px] mb-0">
+      CRO ATIVO
+    </p>
+  </div>
+</div>
+  </div>
     </section>
   );
 }
