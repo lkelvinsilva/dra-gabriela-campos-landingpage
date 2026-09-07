@@ -225,7 +225,8 @@ const handleScroll = () => {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory pb-4"
+            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory pb-4
+              px-[calc(50%-130px)] md:px-[calc(50%-150px)]"
           >
             {/* CLONE DO ÚLTIMO + CARDS + CLONE DO PRIMEIRO */}
             {[cards[cards.length - 1], ...cards, cards[0]].map(
@@ -233,7 +234,7 @@ const handleScroll = () => {
                 <motion.div
                   key={`${card.id}-${index}`}
                   className="card-item w-[260px] md:w-[300px] flex-shrink-0
-                    bg-[#a05a73] rounded-3xl shadow-xl overflow-hidden snap-start
+                    bg-[#a05a73] rounded-3xl shadow-xl overflow-hidden snap-center
                     hover:-translate-y-2 transition-transform duration-300"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}

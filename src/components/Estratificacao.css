@@ -52,148 +52,104 @@
 }
 
 /* =========================
-   INTRO: ilustração + explicação
+   ETAPAS: grid de cards das camadas
    ========================= */
 
-.estratificacao-intro {
+.camadas-grid {
   display: grid;
-  grid-template-columns: minmax(220px, 320px) 1fr;
-  gap: 64px;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 8px;
   margin-bottom: 88px;
 }
 
-/* --- ilustração do dente em camadas --- */
-
-.estratificacao-ilustracao {
-  display: flex;
-  justify-content: center;
-}
-
-.dente-svg {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-}
-
-.camada {
-  transform-box: fill-box;
-  transform-origin: center;
+.camada-card {
+  position: relative;
+  background: var(--creme-card);
+  border: 1px solid var(--linha);
+  border-radius: 14px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(92, 34, 56, 0.06);
   opacity: 0;
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.camada-1 {
-  fill: var(--vinho-escuro);
-  transform: translateY(14px);
-}
-
-.camada-2 {
-  fill: var(--vinho);
-  transform: translateY(14px);
-}
-
-.camada-3 {
-  fill: var(--creme-card);
-  fill-opacity: 0.9;
-  stroke: var(--dourado);
-  stroke-width: 1.5;
-  transform: translateY(14px);
-}
-
-.estratificacao-section.show .camada-1 {
+.estratificacao-section.show .camada-card:nth-child(1) {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.1s;
 }
-
-.estratificacao-section.show .camada-2 {
+.estratificacao-section.show .camada-card:nth-child(2) {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.4s;
+  transition-delay: 0.35s;
 }
-
-.estratificacao-section.show .camada-3 {
+.estratificacao-section.show .camada-card:nth-child(3) {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.7s;
+  transition-delay: 0.6s;
 }
 
-/* --- explicação e lista de camadas --- */
-
-.explicacao-lead {
-  color: var(--texto);
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  margin: 0 0 32px;
-  max-width: 60ch;
-}
-
-.camadas-lista {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.camada-item {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.estratificacao-section.show .camada-item:nth-child(1) {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.15s;
-}
-.estratificacao-section.show .camada-item:nth-child(2) {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.45s;
-}
-.estratificacao-section.show .camada-item:nth-child(3) {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.75s;
-}
-
-.camada-numero {
-  flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--vinho);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--vinho);
+.camada-card-numero {
+  display: block;
+  color: var(--dourado);
   font-family: "Montserrat", sans-serif;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
 }
 
-.camada-item h3 {
+.camada-card-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(140, 58, 84, 0.08);
+  color: var(--vinho);
+  margin-bottom: 18px;
+}
+
+.camada-card-icone svg {
+  width: 28px;
+  height: 28px;
+}
+
+.camada-card h3 {
   color: var(--vinho-escuro);
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin: 2px 0 4px;
+  margin: 0 0 10px;
 }
 
-.camada-item p {
+.camada-card p {
   color: var(--texto-suave);
   font-family: "Montserrat", sans-serif;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   line-height: 1.6;
   margin: 0;
-  max-width: 46ch;
+}
+
+.camada-card-seta {
+  display: none;
+}
+
+@media (min-width: 861px) {
+  .camada-card-seta {
+    display: block;
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--dourado);
+    font-size: 1.4rem;
+    line-height: 1;
+  }
 }
 
 /* =========================
@@ -368,15 +324,14 @@
    ========================= */
 
 @media (max-width: 860px) {
-  .estratificacao-intro {
+  .camadas-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: left;
+    gap: 24px;
+    margin-bottom: 64px;
   }
 
-  .estratificacao-ilustracao {
-    max-width: 180px;
-    margin: 0 auto;
+  .camada-card {
+    padding: 30px 24px;
   }
 
   .estratificacao-tabela-wrap {
@@ -415,14 +370,12 @@
    ========================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .camada,
-  .camada-item,
+  .camada-card,
   .cta-botao {
     transition: none !important;
   }
 
-  .camada,
-  .camada-item {
+  .camada-card {
     opacity: 1 !important;
     transform: none !important;
   }
