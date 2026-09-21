@@ -13,6 +13,12 @@ export default function Testimonials() {
     scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
   };
 
+  // Converte AAAA-MM-DD para DD/MM/AAAA
+  const formatDate = (date) => {
+    const [year, month, day] = date.split("-");
+    return `${day}/${month}/${year}`;
+  };
+
   const depoimentos = [
     {
       nome: "Samuel Soares",
@@ -36,7 +42,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="section-fadepy-24 bg-[#e6d7cc]">
+    <section className="section-fade py-24 bg-[#e6d7cc]">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Título */}
@@ -53,6 +59,7 @@ export default function Testimonials() {
           {/* Setas esquerda */}
           <button
             onClick={slideLeft}
+            aria-label="Ver depoimento anterior"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-20
             text-[#8a6f64] hover:text-[var(--vinho)] text-3xl"
           >
@@ -85,12 +92,12 @@ export default function Testimonials() {
                 </h3>
 
                 {/* Data */}
-                <p className="text-sm text-[#927d75] mb-3">{d.data}</p>
+                <p className="text-sm text-[#927d75] mb-3">
+                  {formatDate(d.data)}
+                </p>
 
                 {/* Estrelas */}
-                <div className="text-yellow-500 text-xl mb-4">
-                  ★★★★★
-                </div>
+                <div className="text-yellow-500 text-xl mb-4">★★★★★</div>
 
                 {/* Texto */}
                 <p className="text-[#6b5a57] leading-relaxed text-[16px]">
@@ -103,6 +110,7 @@ export default function Testimonials() {
           {/* Setas direita */}
           <button
             onClick={slideRight}
+            aria-label="Ver próximo depoimento"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-20
             text-[#8a6f64] hover:text-[var(--vinho)] text-3xl"
           >
@@ -113,7 +121,7 @@ export default function Testimonials() {
 
         {/* Botão CTA */}
         <a
-          href="https://wa.me/5585991355731?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+          href="https://wa.me/5585992883317?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
           target="_blank"
           rel="noopener noreferrer"
           className="mt-12 inline-block bg-gradient-to-r from-[#6B1F3A] to-[#6B1F3A]
@@ -127,6 +135,3 @@ export default function Testimonials() {
     </section>
   );
 }
-
-
-
