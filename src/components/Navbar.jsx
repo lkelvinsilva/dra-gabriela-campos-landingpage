@@ -104,14 +104,24 @@ export default function Navbar() {
             </a>
 
             <a
-              href="https://wa.me/5585991355731"
-              className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[var(--vinho)] text-white text-sm font-medium
-                shadow-[0_4px_16px_rgba(107,39,55,0.35)] hover:shadow-[0_6px_20px_rgba(107,39,55,0.45)]
-                hover:-translate-y-0.5 transition-all duration-200"
-            >
-              <FiPhone className="w-4 h-4" />
-              Agendar consulta
-            </a>
+  href="https://wa.me/5585991355731"
+  className="
+    flex items-center gap-2
+    px-6 py-2.5
+    rounded-full
+    bg-[var(--vinho)]
+    !text-white
+    hover:!text-white
+    text-sm font-medium
+    shadow-[0_4px_16px_rgba(107,39,55,0.35)]
+    hover:shadow-[0_6px_20px_rgba(107,39,55,0.45)]
+    hover:-translate-y-0.5
+    transition-all duration-200
+  "
+>
+  <FiPhone className="w-4 h-4 text-white" />
+  Agendar consulta
+</a>
           </div>
 
           {/* BOTÃO MOBILE HAMBÚRGUER */}
