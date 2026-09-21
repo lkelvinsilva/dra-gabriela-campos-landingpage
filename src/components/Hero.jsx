@@ -290,39 +290,41 @@ export default function Hero() {
         </div>
 
         {/* CTA MOBILE */}
-        <div
-          className="
-            flex
-            gap-[10px]
-            px-[22px]
-            pt-[26px]
-            pb-[28px]
-          "
-        >
-          <a
-            href={`https://wa.me/5585991355731?text=${mensagem}`}
-            target="_blank"
-            rel="noreferrer"
-            className="
-              flex-1
-              text-center
-              no-underline
-              bg-[#2A2320]
-              text-[#F7F3EE]
-              text-[11.5px]
-              tracking-[0.06em]
-              font-medium
-              py-[15px]
-              px-[10px]
-              border
-              border-[#2A2320]
-              transition-opacity
-              duration-150
-              hover:opacity-85
-            "
-          >
-            AGENDAR CONSULTA
-          </a>
+<div
+  className="
+    flex
+    gap-[10px]
+    px-[22px]
+    pt-[26px]
+    pb-[28px]
+  "
+>
+  <a
+    href={`https://wa.me/5585991355731?text=${mensagem}`}
+    target="_blank"
+    rel="noreferrer"
+    className="
+      flex-1
+      text-center
+      no-underline
+      bg-[#D8C7B8]
+      text-[#4A3A32]
+      text-[11.5px]
+      tracking-[0.06em]
+      font-medium
+      py-[15px]
+      px-[10px]
+      border
+      border-[#D8C7B8]
+      transition-all
+      duration-150
+      hover:bg-[#CDB9A8]
+      hover:border-[#CDB9A8]
+    "
+  >
+    AGENDAR CONSULTA
+  </a>
+
 
           <a
             href={`https://wa.me/5585991355731?text=${mensagem}`}
